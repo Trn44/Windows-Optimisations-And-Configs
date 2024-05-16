@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hardware_settings_config applyOOTB="false">
+	<cpu name="Intel(R) Core(TM) i7-10870H CPU @ 2.20GHz" processors="16" processorStride="1" processorBinding="1" />
+	<graphics_card deviceId="0x2520" rating="4">
+		<resolution width="1920" height="1080" displayMode="1" vsync="false" vsyncInterval="1" frameRateLimiterEnabled="false" frameRateLimiterValue="0">
+			<refreshRate numerator="240" denominator="1" />
+			<windowPosition x="0" y="0" />
+			<outputMonitor index="1" />
+			<aspectRatio auto="false" width="16" height="9" />
+			<hdr mode="0" peakNits="1000" />
+		</resolution>
+	</graphics_card>
+	<motion>
+		<dbox enabled="false" />
+		<udp enabled="false" broadcast="false" ip="127.0.0.1" port="20777" sendRate="20" format="2023" yourTelemetry="restricted" onlineNames="off" />
+	</motion>
+	<antialiasing taa="false" checkerboard="false" cmaa2="false" dlss="false" cas="0" fsr="0" fsr2="0" xess="false" />
+	<aa_quality value="3" />
+	<aa_sharpness value="1.000000" />
+	<dlss_g enabled="false" />
+	<dynamicresolution_enabled value="false" />
+	<dynamicresolution_target_fps value="0" />
+	<dynamicresolution_profile deltaDown="0.05" percentageDown="0.95" deltaUp="0.01" percentageUp="0.9" alpha="0.95" />
+	<dynamicresolution_min_scale value="0.5" />
+	<ssao enabled="false" algorithm="0" />
+	<ssrt enabled="false" quality="0" />
+	<texture_streaming sizeInMiB="0" texelDensityBias="0.0" concurrentTextureSwaps="0" />
+	<led_display fanatecNativeSupport="false" sliProNativeSupport="false" sliProForceBrightness="127" thrustmasterLEDEnabled="false" thrustmasterDisplayEnabled="false" wootingRGBEnabled="false" />
+	<anisotropic_filter level="0" />
+	<lighting quality="0" volumetricFog="true" volumetricFogMapWidth="0" volumetricFogMapHeight="0" />
+	<postprocess motionBlur="false" godRays="false" depthOfField="false" lensStreak="false" lensFlare="false" bloom="false" motionBlurV2="false" />
+	<shadows enabled="false" skyShadowMapSize="32" skyShadowCascadeCount="4" skyShadowLowLod="true" worldShadowMapSize="32" skyShadowMap32Bits="false" nightShadowMapSize="32" nightShadowCharacterCast="false" nightShadowSourceCount="2" sampling="0" spotShadowMapSize="32" spotShadowSampling="0" crowdInShadows="false" />
+	<particles enabled="false" distanceScale="0" rate="0" high="false" />
+	<crowd distanceScale="1.0" billboardDistance="0" />
+	<vehicle_reflections envMapScale="0.01" envMapUpdateMode="alternate" envMapRenderMode="cars" cubeMapEnabled="false" cubeMapScale="1.0" cubeMapUpdateMode="oneFacePerFrame" />
+	<mirrors mirrorsUpdateMode="alternate" mirrorsRenderMode="cars" treesInMirrors="false" crowdInMirrors="false" highDetailMirrors="false" highDetailTyresAndCar="false" particlesInMirrors="false" />
+	<weather_effects rainSplashes="false" rainSheets="false" rainBeads="false" rainHigh="false" trackHeatHaze="false" planarReflectionsEnabled="false" planarReflectionsHQEnabled="false" planarReflectionsRangeScale="1.0" planarReflectionsRTScale="0.1" planarReflectionsMipTailBlur="false" proceduralCloudRTScale="1.0" proceduralCloudTiling="9" proceduralCloudQuality="0" />
+	<ground_cover enabled="false" grassFlattening="false" drawDistance="1.0" meshes="false" />
+	<trees useLOD0="true" distanceScale="1" />
+	<hair enabled="false" />
+	<skidmarks enabled="false" parallax="false" />
+	<skidmarks_blending enabled="false" />
+	<audio audioUpdateRate="1" audio_min_job_worker_threads="2" audio_max_job_worker_threads="16" />
+	<async_compute enabled="false" />
+	<cs_culling enabled="false" />
+	<vendor_shader_pack enabled="false" />
+	<replay_directory path="" />
+	<rt_quality quality="0" />
+	<rt_shadows enabled="false" />
+	<rt_reflections enabled="false" />
+	<rt_transparent_reflections enabled="false" />
+	<rt_ao enabled="false" />
+	<rt_ddgi enabled="false" />
+	<rt_version version="0" />
+	<vrs enabled="false" />
+	<reflex mode="2" />
+	<ser enabled="false" />
+	<ca enabled="false" />
+</hardware_settings_config>
