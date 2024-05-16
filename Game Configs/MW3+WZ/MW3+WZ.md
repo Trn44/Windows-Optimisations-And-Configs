@@ -1,4 +1,4 @@
-Competitive config, prioritises FPS over visual quality.</br>
+Competitive settings config, prioritises FPS over visual quality.</br>
 Game config location: C:\Users\YourWindowsUser\Documents\Call of Duty\players
 
 Tested on:</br>
