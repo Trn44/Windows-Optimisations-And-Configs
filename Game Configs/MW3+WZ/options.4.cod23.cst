@@ -20,19 +20,19 @@ ConfigCloudSavegameEnabled:0.0 = "true"
 RecommendedSet:0.0 = "true"
 
 // DO NOT MODIFY. Normalized detected total CPU power, based on cpu type, count, and speed
-DetectedFrequencyGHz:0.0 = ""
+DetectedFrequencyGHz:0.0 = "17.664001"
 
 // DO NOT MODIFY. Physical memory detected in the system
-DetectedMemoryAmountMB:0.0 = ""
+DetectedMemoryAmountMB:0.0 = "16297"
 
 // DO NOT MODIFY. Last used GPU
-LastUsedGPU:0.0 = ""
+LastUsedGPU:0.0 = "NVIDIA GeForce RTX 3060 Laptop GPU"
 
 // DO NOT MODIFY. Last Detected GPU driver version
-GPUDriverVersion:0.0 = ""
+GPUDriverVersion:0.0 = "55244 r552_19"
 
 // Version of the last display driver used to run the game
-DisplayDriverVersion:0.0 = ""
+DisplayDriverVersion:0.0 = "552.44"
 
 // Recommended display driver version seen during last game startup
 DisplayDriverVersionRecommended:0.0 = "537.58"
@@ -54,10 +54,10 @@ AudioMix:0.0 = "0" // 0 to 9
 AudioWantedChannelsNumber:0.0 = "2" // 0 to 16
 
 // Adjusts overall volume of the game
-Volume:0.0 = "1.000000" // 0.000000 to 1.000000
+Volume:0.0 = "0.100000" // 0.000000 to 1.000000
 
 // Adjusts the volume for character dialogues and announcer voices
-VoiceVolume:0.0 = "0.500000" // 0.000000 to 1.000000
+VoiceVolume:0.0 = "1.000000" // 0.000000 to 1.000000
 
 // Adjusts the volume of the music
 MusicVolume:0.0 = "0.000000" // 0.000000 to 1.000000
@@ -66,7 +66,7 @@ MusicVolume:0.0 = "0.000000" // 0.000000 to 1.000000
 CinematicVolume:0.0 = "0.000000" // 0.000000 to 1.000000
 
 // Adjusts the volume of the sound effects
-EffectsVolume:0.0 = "0.500000" // 0.000000 to 1.000000
+EffectsVolume:0.0 = "1.000000" // 0.000000 to 1.000000
 
 // Adjusts the volume of hit markers
 HitMarkersVolume:0.0 = "1.000000" // 0.000000 to 1.000000
@@ -81,7 +81,7 @@ LicensedMusicVolume:0.0 = "0.000000" // 0.000000 to 1.000000
 WarTracksVolume:0.0 = "0.000000" // 0.000000 to 1.000000
 
 // Adjusts the volume of audio in Telescope (MOTD)
-TelescopeVolume:0.0 = "0.000000" // 0.000000 to 1.000000
+TelescopeVolume:0.0 = "1.000000" // 0.000000 to 1.000000
 
 // Mute the microphone after this many seconds of in-game input inactivity (-1 to disable)
 MicInactivityMuteDelay:0.0 = "-1.000000" // -1.000000 to 600.000000
@@ -127,13 +127,13 @@ MicLoudTimeOut:0.0 = "0.500000" // 0.000000 to 5.000000
 //
 
 // Apply custom framerate limit
-CapFps:0.0 = "false"
+CapFps:0.0 = "true"
 
 // Custom maximum frames per second when in a match
-MaxFpsInGame:0.0 = "300" // 30 to 300
+MaxFpsInGame:0.0 = "240" // 30 to 300
 
 // Custom maximum frames per second when in menus
-MaxFpsInMenu:1.0 = "300" // 30 to 300
+MaxFpsInMenu:1.0 = "240" // 30 to 300
 
 // Custom maximum frames per second when game is out of focus
 MaxFpsOutOfFocus:0.0 = "5" // 5 to 300
@@ -230,7 +230,7 @@ FocusedMode:0.0 = "false"
 FocusedModeOpacity:0.0 = "0.000000" // 0.000000 to 1.000000
 
 // Enable Nvidia low latency mode. Boost mode request maximum GPU clock frequency regardless of workload
-NvidiaReflex:0.0 = "Enabled + Boost" // one of [Disabled, Enabled, Enabled + boost]
+NvidiaReflex:0.0 = "Enabled + boost" // one of [Disabled, Enabled, Enabled + boost]
 
 //
 // Graphics
@@ -270,13 +270,13 @@ UiQuality:0.0 = "1080P" // one of [1080P, 4K, Auto]
 WorldStreamingQuality:0.0 = "Low" // one of [Low, High]
 
 // Activate dynamic scene resolution
-DynamicSceneResolution:0.0 = "true"
+DynamicSceneResolution:0.0 = "false"
 
 // Target frame time in ms for dynamic scene resolution.
-DynamicSceneResolutionTarget:0.0 = "0.000000" // 0.000000 to 100.000000
+DynamicSceneResolutionTarget:0.0 = "3.333333" // 0.000000 to 100.000000
 
 // Absolute target resolution
-AbsoluteTargetResolution:0.0 = "native" // one of [540P, 640P, 720P, 900P, 1080P, 1440P, native, none]
+AbsoluteTargetResolution:0.0 = "none" // one of [540P, 640P, 720P, 900P, 1080P, 1440P, native, none]
 
 // Volumetric quality
 VolumetricQuality:0.0 = "QUALITY_LOW" // one of [QUALITY_LOW, QUALITY_MEDIUM, QUALITY_HIGH]
@@ -297,7 +297,7 @@ SSAOTechnique:0.0 = "Off" // one of [Off, GTAO, MDAO, GTAO & MDAO]
 SSRMode:0.0 = "Off" // one of [Off, Deferred LQ, Deferred HQ]
 
 // User preferred anti-aliasing technique
-AATechniquePreferred:0.3 = "Filmic SMAA T2x" // one of [Filmic SMAA T2x, DLSS, XeSS, FSR AA]
+AATechniquePreferred:0.3 = "DLSS" // one of [Filmic SMAA T2x, DLSS, XeSS, FSR AA]
 
 // Reflection probe relighting update stages
 ReflectionProbeRelighting:0.0 = "1" // 1 to 4
@@ -306,13 +306,13 @@ ReflectionProbeRelighting:0.0 = "1" // 1 to 4
 StaticSunshadowClipmapResolution:0.0 = "0" // 0 to 2147483647
 
 // DLSS performance mode
-DLSSPerfMode:0.0 = "Maximum Quality" // one of [Ultra Performance, Maximum Performance, Balanced, Maximum Quality]
+DLSSPerfMode:0.0 = "Ultra Performance" // one of [Ultra Performance, Maximum Performance, Balanced, Maximum Quality]
 
 // DLSS-RR performance mode
 DLSSRRPerfMode:1.0 = "Maximum Performance" // one of [Ultra Performance, Maximum Performance, Balanced, Maximum Quality, Native Resolution]
 
 // DLSS mode
-DLSSMode:0.0 = "DLSS" // one of [DLSS, DLAA, DLSS-D]
+DLSSMode:0.0 = "DLAA" // one of [DLSS, DLAA, DLSS-D]
 
 // DLSS Sharpness.
 DLSSSharpness:2.0 = "1.000000" // 0.000000 to 1.000000
@@ -321,19 +321,19 @@ DLSSSharpness:2.0 = "1.000000" // 0.000000 to 1.000000
 DLSSFrameGeneration:0.0 = "false"
 
 // XeSS quality
-XeSSQuality:0.0 = "Balanced" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality, Custom]
+XeSSQuality:0.0 = "Maximum Performance" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality, Custom]
 
 // Select AMD FidelityFX
-AMDFidelityFX:0.0 = "CAS" // one of [Off, CAS, FSR 1, FSR 3]
+AMDFidelityFX:0.0 = "Off" // one of [Off, CAS, FSR 1, FSR 3]
 
 // AMD FidelityFX Super Resolution quality
-AMDSuperResolutionQuality:0.0 = "Ultra Quality" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality]
+AMDSuperResolutionQuality:0.0 = "Maximum Performance" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality]
 
 // Strength for Contrast Adaptive Sharpening (CAS)
 AMDContrastAdaptiveSharpeningStrength:0.0 = "1.000000" // 0.000000 to 1.000000
 
 // AMD FidelityFX Super Resolution 2 & 3 quality
-AMDSuperResolution2Quality:0.0 = "Native Resolution" // one of [Ultra Performance, Maximum Performance, Balanced, Maximum Quality, Native Resolution]
+AMDSuperResolution2Quality:0.0 = "Ultra Performance" // one of [Ultra Performance, Maximum Performance, Balanced, Maximum Quality, Native Resolution]
 
 // Activate FSR 3 Frame Interpolation
 FSRFrameInterpolation:0.0 = "false"
@@ -342,10 +342,10 @@ FSRFrameInterpolation:0.0 = "false"
 NVIDIAImageScaling:0.0 = "false"
 
 // NVIDIA Image Scaling quality
-NVIDIAImageScalingQuality:0.0 = "Native Resolution" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality, Custom, Native Resolution]
+NVIDIAImageScalingQuality:0.0 = "Maximum Performance" // one of [Maximum Performance, Balanced, Maximum Quality, Ultra Quality, Custom, Native Resolution]
 
 // NVIDIA Image Scaling sharpness
-NVIDIAImageScalingSharpness:0.0 = "0.300000" // 0.000000 to 1.000000
+NVIDIAImageScalingSharpness:0.0 = "1.000000" // 0.000000 to 1.000000
 
 // Set HDR activation mode. Option only takes effect on HDR Display.
 HDR:0.0 = "Off" // one of [Off, On, Automatic]
@@ -384,7 +384,7 @@ WeatherGridVolumesQuality:0.0 = "Off" // one of [Ultra, High, Medium, Low, Off]
 DxrMode:0.0 = "Off" // one of [Off, On]
 
 // Enables optimisations when resizable-bar is supported by uploading more data to VRAM
-GPUUploadHeaps:0.0 = "true"
+GPUUploadHeaps:0.0 = "false"
 
 // If true radial motion blur will be applied based on the player velocity.
 EnableVelocityBasedBlur:0.0 = "false"
@@ -406,7 +406,7 @@ SkipIntro:0.0 = "true"
 ViewedSplashScreen:0.0 = "true"
 
 // Display the OS cursors instead of the custom game one for accessibility reasons.
-UseOSCursors:0.0 = "false"
+UseOSCursors:0.0 = "true"
 
 // Enable/Disable the FPS counter on PC
 ShowFPSCounter:0.0 = "true"
@@ -431,10 +431,10 @@ WeaponCycleDelay:0.0 = "0" // 0 to 5000
 MouseUsesRawInput:0.0 = "true"
 
 // Max yaw speed in degrees for game pad and keyboard
-YawSpeed:0.0 = "52.800000" // 0.000000 to 280.000000
+YawSpeed:0.0 = "140.000000" // 0.000000 to 280.000000
 
 // Max pitch speed in degrees for game pad
-PitchSpeed:0.0 = "52.800000" // 0.000000 to 280.000000
+PitchSpeed:0.0 = "140.000000" // 0.000000 to 280.000000
 
 // Vehicle mouse steering sensitivity
 VehicleMouseSteerSensitivity:0.0 = "2.000000" // 0.010000 to 10.000000
