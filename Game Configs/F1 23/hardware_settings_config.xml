@@ -2,7 +2,7 @@
 <hardware_settings_config applyOOTB="false">
 	<cpu name="Intel(R) Core(TM) i7-10870H CPU @ 2.20GHz" processors="16" processorStride="1" processorBinding="1" />
 	<graphics_card deviceId="0x2520" rating="4">
-		<resolution width="1920" height="1080" displayMode="1" vsync="false" vsyncInterval="1" frameRateLimiterEnabled="false" frameRateLimiterValue="0">
+		<resolution width="1920" height="1080" displayMode="1" vsync="false" vsyncInterval="1" frameRateLimiterEnabled="true" frameRateLimiterValue="60">
 			<refreshRate numerator="240" denominator="1" />
 			<windowPosition x="0" y="0" />
 			<outputMonitor index="1" />
@@ -36,11 +36,11 @@
 	<mirrors mirrorsUpdateMode="alternate" mirrorsRenderMode="cars" treesInMirrors="false" crowdInMirrors="false" highDetailMirrors="false" highDetailTyresAndCar="false" particlesInMirrors="false" />
 	<weather_effects rainSplashes="false" rainSheets="false" rainBeads="false" rainHigh="false" trackHeatHaze="false" planarReflectionsEnabled="false" planarReflectionsHQEnabled="false" planarReflectionsRangeScale="1.0" planarReflectionsRTScale="0.1" planarReflectionsMipTailBlur="false" proceduralCloudRTScale="1.0" proceduralCloudTiling="9" proceduralCloudQuality="0" />
 	<ground_cover enabled="false" grassFlattening="false" drawDistance="1.0" meshes="false" />
-	<trees useLOD0="true" distanceScale="1" />
+	<trees useLOD0="true" distanceScale="1.0" />
 	<hair enabled="false" />
 	<skidmarks enabled="false" parallax="false" />
 	<skidmarks_blending enabled="false" />
-	<audio audioUpdateRate="1" audio_min_job_worker_threads="2" audio_max_job_worker_threads="16" />
+	<audio audioUpdateRate="2" audio_min_job_worker_threads="2" audio_max_job_worker_threads="8" />
 	<async_compute enabled="false" />
 	<cs_culling enabled="false" />
 	<vendor_shader_pack enabled="false" />
@@ -52,7 +52,7 @@
 	<rt_ao enabled="false" />
 	<rt_ddgi enabled="false" />
 	<rt_version version="0" />
-	<vrs enabled="false" />
+	<vrs enabled="true" />
 	<reflex mode="2" />
 	<ser enabled="false" />
 	<ca enabled="false" />
