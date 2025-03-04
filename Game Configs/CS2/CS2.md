@@ -1,7 +1,7 @@
 Competitive settings config, prioritises FPS over visual quality.</br>
 Game config location: C:\Steam\userdata\YourSteamUserNumber\730\local\cfg</br>
 autoexec.cfg location: C:\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg</br>
-Muli folder to be placed in same directory as autoexec ^</br>
+movement folder & jump.cfg files placed in same directory as autoexec^</br>
 
 Tested on:</br>
 Intel i7-10870H (Undervolt -150 Core -90 Cache)</br>
