@@ -517,7 +517,7 @@
       <ProfileSetting>
         <SettingNameInfo>Override scaling ratio for DLSS-SR</SettingNameInfo>
         <SettingID>283385333</SettingID>
-        <SettingValue>1065336439</SettingValue>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
