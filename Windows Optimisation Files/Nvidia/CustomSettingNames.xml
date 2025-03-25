@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   |============= DESCRIPTION =============|
@@ -9653,56 +9654,64 @@
       <HexValue>0x00000000</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>33% Ultra Performance</UserfriendlyName>
-      <HexValue>0x00000021</HexValue>
+      <UserfriendlyName>100% - DLAA</UserfriendlyName>
+      <HexValue>0x00000064</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>37% Extreme Performance</UserfriendlyName>
-      <HexValue>0x00000025</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>41% Extra Performance</UserfriendlyName>
-      <HexValue>0x00000029</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>45% Performance+</UserfriendlyName>
-      <HexValue>0x0000002D</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>50% Performance</UserfriendlyName>
-      <HexValue>0x00000032</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>58% Balanced</UserfriendlyName>
-      <HexValue>0x0000003A</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>62% Balanced+</UserfriendlyName>
-      <HexValue>0x0000003E</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>66% Quality</UserfriendlyName>
-      <HexValue>0x00000042</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>77% Ultra Quality</UserfriendlyName>
-      <HexValue>0x0000004D</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>85% Ultra Quality+</UserfriendlyName>
-      <HexValue>0x00000055</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>88% DLAA (No Perf Impact)</UserfriendlyName>
-      <HexValue>0x00000058</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>99% DLAA (Incase 100% Breaks)</UserfriendlyName>
+      <UserfriendlyName>99% - DLAA (If 100% Breaks)</UserfriendlyName>
       <HexValue>0x00000063</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>100% DLAA</UserfriendlyName>
-      <HexValue>0x00000064</HexValue>
+      <UserfriendlyName>88% - DLAA Lite (Transformer Cost Removed)</UserfriendlyName>
+      <HexValue>0x00000058</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>83% - Ultra Quality+</UserfriendlyName>
+      <HexValue>0x00000053</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>77% - Ultra Quality</UserfriendlyName>
+      <HexValue>0x0000004D</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>72% - High Quality</UserfriendlyName>
+      <HexValue>0x00000048</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>67% - Quality</UserfriendlyName>
+      <HexValue>0x00000042</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>62% - Balanced Quality</UserfriendlyName>
+      <HexValue>0x0000003E</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>58% - Balanced</UserfriendlyName>
+      <HexValue>0x0000003A</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>54% - Balanced Performance</UserfriendlyName>
+      <HexValue>0x00000036</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>50% - Performance</UserfriendlyName>
+      <HexValue>0x00000032</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>45% - Extra Performance</UserfriendlyName>
+      <HexValue>0x0000002D</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>41% - High Performance</UserfriendlyName>
+      <HexValue>0x00000029</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>37% - Extreme Performance</UserfriendlyName>
+      <HexValue>0x00000025</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>33% - Ultra Performance</UserfriendlyName>
+      <HexValue>0x00000021</HexValue>
     </CustomSettingValue>
   </SettingValues>
   <SettingMasks/>
@@ -9739,7 +9748,7 @@
       <HexValue>0x00000005</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>Custom (Unused)</UserfriendlyName>
+      <UserfriendlyName>Custom</UserfriendlyName>
       <HexValue>0x00000006</HexValue>
     </CustomSettingValue>
   </SettingValues>
@@ -9757,60 +9766,64 @@
       <HexValue>0x00000000</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>33% Ultra Performance</UserfriendlyName>
-      <HexValue>0x00000021</HexValue>
+      <UserfriendlyName>100% - DLAA</UserfriendlyName>
+      <HexValue>0x00000064</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>37% Extreme Performance</UserfriendlyName>
-      <HexValue>0x00000025</HexValue>
+      <UserfriendlyName>99% - DLAA (If 100% Breaks)</UserfriendlyName>
+      <HexValue>0x00000063</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>41% Extra Performance</UserfriendlyName>
-      <HexValue>0x00000029</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>45% Performance+</UserfriendlyName>
-      <HexValue>0x0000002D</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>50% Performance</UserfriendlyName>
-      <HexValue>0x00000032</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>58% Balanced</UserfriendlyName>
-      <HexValue>0x0000003A</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>62% Balanced+</UserfriendlyName>
-      <HexValue>0x0000003E</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>66% Quality</UserfriendlyName>
-      <HexValue>0x00000042</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>77% Ultra Quality</UserfriendlyName>
-      <HexValue>0x0000004D</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>85% Ultra Quality+</UserfriendlyName>
-      <HexValue>0x00000055</HexValue>
-    </CustomSettingValue>
-    <CustomSettingValue>
-      <UserfriendlyName>88% DLAA (No Perf Impact)</UserfriendlyName>
+      <UserfriendlyName>88% - DLAA Lite (Transformer Cost Removed)</UserfriendlyName>
       <HexValue>0x00000058</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>99% DLAA (Incase 100% Breaks)</UserfriendlyName>
-      <HexValue>0x00000063</HexValue>
+      <UserfriendlyName>83% - Ultra Quality+</UserfriendlyName>
+      <HexValue>0x00000053</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>99% DLAA</UserfriendlyName>
-      <HexValue>0x00000063</HexValue>
+      <UserfriendlyName>77% - Ultra Quality</UserfriendlyName>
+      <HexValue>0x0000004D</HexValue>
     </CustomSettingValue>
     <CustomSettingValue>
-      <UserfriendlyName>100% DLAA</UserfriendlyName>
-      <HexValue>0x00000064</HexValue>
+      <UserfriendlyName>72% - High Quality</UserfriendlyName>
+      <HexValue>0x00000048</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>67% - Quality</UserfriendlyName>
+      <HexValue>0x00000042</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>62% - Balanced Quality</UserfriendlyName>
+      <HexValue>0x0000003E</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>58% - Balanced</UserfriendlyName>
+      <HexValue>0x0000003A</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>54% - Balanced Performance</UserfriendlyName>
+      <HexValue>0x00000036</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>50% - Performance</UserfriendlyName>
+      <HexValue>0x00000032</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>45% - Extra Performance</UserfriendlyName>
+      <HexValue>0x0000002D</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>41% - High Performance</UserfriendlyName>
+      <HexValue>0x00000029</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>37% - Extreme Performance</UserfriendlyName>
+      <HexValue>0x00000025</HexValue>
+    </CustomSettingValue>
+    <CustomSettingValue>
+      <UserfriendlyName>33% - Ultra Performance</UserfriendlyName>
+      <HexValue>0x00000021</HexValue>
     </CustomSettingValue>
   </SettingValues>
   <SettingMasks/>
