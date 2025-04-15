@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <hardware_settings_config applyOOTB="false">
-	<cpu name="Intel(R) Core(TM) i7-10870H CPU @ 2.20GHz" processors="16" processorStride="1" processorBinding="1" />
-	<graphics_card deviceId="0x2520" rating="4">
-		<resolution width="1920" height="1080" displayMode="1" vsync="false" vsyncInterval="1" frameRateLimiterEnabled="true" frameRateLimiterValue="60">
-			<refreshRate numerator="240" denominator="1" />
+	<cpu name="AMD Ryzen 7 9800X3D 8-Core Processor" processors="16" processorStride="1" processorBinding="1" />
+	<graphics_card deviceId="0x2F04" rating="0">
+		<resolution width="2560" height="1440" displayMode="1" vsync="false" vsyncInterval="1" frameRateLimiterEnabled="false" frameRateLimiterValue="250">
+			<refreshRate numerator="260001" denominator="1000" />
 			<windowPosition x="0" y="0" />
 			<outputMonitor index="1" />
 			<aspectRatio auto="false" width="16" height="9" />
