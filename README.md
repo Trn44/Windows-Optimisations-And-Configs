@@ -1,6 +1,9 @@
-Windows OS Optimisations
-<br>Work In Progress</br>
-- Windows Optimisations
-- Game Configs
+A collection of Windows operating system optimisations <br/>
+Supported on Windows 10 & 11
+
+Includes:
+- Windows optimisation files
 - Scripts
+- Game configs
+- Nvidia settings
 - etc
