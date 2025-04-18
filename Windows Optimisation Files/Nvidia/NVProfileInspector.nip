@@ -209,12 +209,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Battery Boost</SettingNameInfo>
-        <SettingID>269573257</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Whisper Mode</SettingNameInfo>
         <SettingID>269573258</SettingID>
         <SettingValue>0</SettingValue>
