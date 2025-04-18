@@ -197,12 +197,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>15287036</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Enable NIS 2.0 KMD NOTIFICATION</SettingNameInfo>
         <SettingID>28027939</SettingID>
         <SettingValue>0</SettingValue>
@@ -212,6 +206,12 @@
         <SettingNameInfo>Virtual Reality pre-rendered frames</SettingNameInfo>
         <SettingID>269553971</SettingID>
         <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Battery Boost</SettingNameInfo>
+        <SettingID>269573257</SettingID>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
