@@ -313,7 +313,7 @@
       <ProfileSetting>
         <SettingNameInfo>Override DLSSG multi-frame count</SettingNameInfo>
         <SettingID>273507943</SettingID>
-        <SettingValue>3</SettingValue>
+        <SettingValue>15</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -415,7 +415,7 @@
       <ProfileSetting>
         <SettingNameInfo>Display the VRR Overlay Indicator</SettingNameInfo>
         <SettingID>278262127</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
