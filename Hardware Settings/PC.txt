@@ -1,0 +1,14 @@
+1. Desktop 
+Ryzen 7 9800X3D
+  PBO = Enabled
+  PBO Limits = Motherboard
+  PBO - +200MHz
+  Curve Optimiser = -20 All Cores
+
+
+2. Gigabyte Aorus 15P KC
+Intel i7-10870H
+  Core Undervolt = -150mv
+  Cache Undervolt = -90mv
+  iGPU = Disabled
+  C-States = Disabled
