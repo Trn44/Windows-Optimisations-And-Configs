@@ -2,8 +2,11 @@
 Ryzen 7 9800X3D
   PBO = Enabled
   PBO Limits = Motherboard
-  PBO - +200MHz
+  PBO = +200MHz
   Curve Optimiser = -20 All Cores
+  C-States = Enabled
+  SMT = Enabled
+  Tj Max = 85°c
 
 
 2. Gigabyte Aorus 15P KC
@@ -12,3 +15,5 @@ Intel i7-10870H
   Cache Undervolt = -90mv
   iGPU = Disabled
   C-States = Disabled
+  Hyperthreading = Enabled
+  Tj Max = 85°c
