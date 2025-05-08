@@ -8,6 +8,11 @@ Ryzen 7 9800X3D
   SMT = Enabled
   Tj Max = 85°c
 
+NVIDIA RTX 5070 12GB
+  Core Overclock = 3225MHz
+  Core Undervolt = 1000mV
+  Memory Overclock = 17000MHz
+  Power Limit = 275W
 
 2. Gigabyte Aorus 15P KC
 Intel i7-10870H
@@ -17,3 +22,9 @@ Intel i7-10870H
   C-States = Disabled
   Hyperthreading = Enabled
   Tj Max = 85°c
+
+NVIDIA RTX 3060 6GB
+  Core Overclock = 2025MHz
+  Core Undervolt = 0.943mV
+  Memory Overclock = 7700MHz
+  Power Limit = 115W
