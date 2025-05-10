@@ -1,20 +1,16 @@
-$prefsPath = "$env:APPDATA\Spotify\prefs"
-$disableSetting = 'ui.hardware_acceleration=false'
-$enableSetting = 'ui.hardware_acceleration=true'
+$PrefsPath = "$env:APPDATA\Spotify\prefs"
+$HWADisableSetting = 'ui.hardware_acceleration=false'
+$HWAEnableSetting = 'ui.hardware_acceleration=true'
 
-# Creating the prefs file if it does not exist
-if (-not (Test-Path -Path $prefsPath -PathType Leaf)) {
-    New-Item -Path $prefsPath -ItemType File -Force | Out-Null
+if (-not (Test-Path -Path $PrefsPath -PathType Leaf)) {
+    New-Item -Path $PrefsPath -ItemType File -Force | Out-Null
 }
 
-# Reading file
-$prefsContent = Get-Content -Path $prefsPath
+$PrefsContent = Get-Content -Path $PrefsPath
 
-# Disable hardware acceleration
-$prefsContent = $prefsContent | Where-Object { $_ -ne $enableSetting }
-if ($prefsContent -notcontains $disableSetting) {
-    $prefsContent += $disableSetting
+$PrefsContent = $PrefsContent | Where-Object { $_ -ne $HWAEnableSetting }
+if ($PrefsContent -notcontains $HWADisableSetting) {
+    $PrefsContent += $HWADisableSetting
 }
 
-# Writing to file
-$prefsContent | Set-Content -Path $prefsPath -Force
+$PrefsContent | Set-Content -Path $PrefsPath -Force
