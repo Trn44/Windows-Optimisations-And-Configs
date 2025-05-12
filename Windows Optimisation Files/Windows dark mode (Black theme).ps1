@@ -1,5 +1,4 @@
 $Host.UI.RawUI.BackgroundColor = "Black"
-$Host.UI.RawUI.ForegroundColor = "White"
 Clear-Host
 
 function Restart-Explorer {
@@ -56,7 +55,6 @@ do {
     Write-Host "1. Apply Dark Theme"
     Write-Host "2. Revert to Default Theme"
     $Select = Read-Host "Enter 1 or 2"
-
     switch ($Select) {
         "1" {BlackTheme; break}
         "2" {RevertDefaultTheme; break}
