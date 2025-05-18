@@ -1,9 +1,8 @@
-A collection of Windows operating system optimisations <br/>
-Supported on Windows 10 & 11
+Windows operating system optimisations <br/>
+- Supports Windows 10 and 11
 
 Includes:
-- Windows optimisation files
-- Scripts
+- Windows optimisation scripts & files
 - Game configs
-- Nvidia settings
+- NVIDIA GPU settings & configs
 - etc
