@@ -1,17 +1,13 @@
-    If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator"))
-    {Start-Process PowerShell.exe -ArgumentList ("-NoProfile -ExecutionPolicy Bypass -File `"{0}`"" -f $PSCommandPath) -Verb RunAs
-    Exit}
-    $Host.UI.RawUI.WindowTitle = $myInvocation.MyCommand.Definition + " (Administrator)"
-    $Host.UI.RawUI.BackgroundColor = "Black"
-	$Host.PrivateData.ProgressBackgroundColor = "Black"
-    $Host.PrivateData.ProgressForegroundColor = "White"
-    Clear-Host
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
+    [Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
 
-Write-Host "Remove Ethernet cable during the Windows installation . . ." -ForegroundColor Red
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+$Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
-# save autounattend config
-$MultilineComment = @"
+
+$XML = @"
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend">
     <settings pass="oobeSystem">
@@ -151,22 +147,3 @@ $MultilineComment = @"
     </settings>
 </unattend>
 "@
-Set-Content -Path "$env:TEMP\autounattend.xml" -Value $MultilineComment -Force
-# user input change account name in autounattend
-$path = "$env:TEMP\autounattend.xml"
-# force user to not leave name blank
-do {
-$username = Read-Host -Prompt "Enter Account Name (No Spaces/Spacebar)"
-} while ([string]::IsNullOrWhiteSpace($username))
-(Get-Content $path) -replace "@",$username | out-file $path
-# convert file to utf8
-Get-Content "$env:TEMP\autounattend.xml" | Set-Content -Encoding utf8 "$env:SystemDrive\Windows\Temp\autounattend.xml" -Force
-# delete old autounattend file
-Remove-Item -Path "$env:TEMP\autounattend.xml" -Force | Out-Null
-# user input move autounattend to USB
-$file = "$env:SystemDrive\Windows\Temp\autounattend.xml"
-$destination = Read-Host -prompt "Enter USB Drive Letter" 
-$destination += ":\"
-Move-Item -Path $file -Destination $destination -Force
-# open USB directory to confirm
-Start-Process $destination
