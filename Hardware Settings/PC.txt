@@ -10,14 +10,14 @@ Ryzen 7 9800X3D
 
 NVIDIA RTX 5070 12GB
   Core Overclock = 3225MHz
-  Core Undervolt = 1000mV
+  Core Undervolt = 1.000mV
   Memory Overclock = 17000MHz
   Power Limit = 275W
 
 2. Gigabyte Aorus 15P KC
 Intel i7-10870H
-  Core Undervolt = -150mv
-  Cache Undervolt = -90mv
+  Core Undervolt = -0.150mv
+  Cache Undervolt = -0.90mv
   iGPU = Disabled
   C-States = Disabled
   Hyperthreading = Enabled
