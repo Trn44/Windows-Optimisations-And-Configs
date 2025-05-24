@@ -7,5 +7,17 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
-function ApplicationInstallers {    
+function ApplicationInstallers {
+    Write-Host "1. Install ** "
+    Write-Host "2. Install ** "
+    Write-Host "1. Install ** "
+    Write-Host "2. Install ** "
+    Write-Host "1. Install ** "
+    Write-Host "2. Install ** "
+    Write-Host "1. Install ** "
+    Write-Host "2. Install ** "
+    Write-Host "1. Install ** "
+    Write-Host "2. Install ** "
 }
+
+#Switch placeholders **
