@@ -29,7 +29,7 @@ Windows Registry Editor Version 5.00
 "MouseThreshold2"="0"
 "@
     Mouse-Acceleration -Content $DisableMouseAcceleration -FileName "DisableMA.reg"
-    Write-Host "`nDisabled mouse acceleration."
+    Write-Host "`nDisabled Mouse Acceleration."
     Start-Sleep -Seconds 5
 }
 function EnableMouseAcceleration {
