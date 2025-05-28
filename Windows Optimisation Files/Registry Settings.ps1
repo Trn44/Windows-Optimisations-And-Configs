@@ -133,6 +133,20 @@ Windows Registry Editor Version 5.00
 "SubscribedContentEnabled"=dword:00000001
 "SystemPaneSuggestionsEnabled"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000003
+"DoNotShowFeedbackNotifications"=-
+"LimitDiagnosticLogCollection"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
+"AITEnable"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient\Windows]
+"CEIPEnable"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=-
+
 "@
     Optimize-Registry -Content $RevertRegistry -FileName "RemoveOptimisations.reg"
     Write-Host "`nReverted Registry Optimisations, restart PC to revert changes."
