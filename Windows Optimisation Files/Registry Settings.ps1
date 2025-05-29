@@ -44,7 +44,9 @@ Windows Registry Editor Version 5.00
 "SlideshowEnabled"=dword:00000000
 "SoftLandingEnabled"=dword:00000000
 "SubscribedContent-310093Enabled"=dword:00000000
+"SubscribedContent-314559Enabled"=dword:00000000
 "SubscribedContent-314563Enabled"=dword:00000000
+"SubscribedContent-338387Enabled"=dword:00000000
 "SubscribedContent-338388Enabled"=dword:00000000
 "SubscribedContent-338389Enabled"=dword:00000000
 "SubscribedContent-338389Enabled"=dword:00000000
@@ -89,6 +91,10 @@ Windows Registry Editor Version 5.00
 "UploadUserActivities"=dword:00000000
 "AllowClipboardHistory"=dword:00000000
 "AllowCrossDeviceClipboard"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
 "@
     Optimize-Registry -Content $OptimiseRegistry -FileName "OptimiseReg.reg"
     Write-Host "`nApplied Registry Optimisations, restart PC to apply changes."
