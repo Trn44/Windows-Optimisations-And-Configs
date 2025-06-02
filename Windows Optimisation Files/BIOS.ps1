@@ -16,6 +16,7 @@ function MotherboardBIOS {
     $URL = "https://www.google.com/search?q=$MotherboardModel+BIOS"
     Start-Process $URL
 }
+
 function RestartToBIOS {
     Shutdown.exe /r /fw /t 8
     Write-Host "`nRestarting to BIOS."
@@ -33,7 +34,7 @@ do {
         "2" {RestartToBIOS}
         "3" {Exit}
     default {
-    Write-Host "Invalid option, pick 1 or 2"
+    Write-Host "Invalid option, pick 1, 2 or 3"
     Start-Sleep -Seconds 2
         }
     }
