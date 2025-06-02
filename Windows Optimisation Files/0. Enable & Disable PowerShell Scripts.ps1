@@ -1,4 +1,4 @@
-if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
     [Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
     exit
@@ -8,47 +8,48 @@ $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
 function Enable {
-    $RegistryPaths = 
-        ("HKCU:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell",
-        "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell")
-    foreach ($Path in $RegistryPaths) {
-        Set-ItemProperty -Path $Path -Name ExecutionPolicy -Value Unrestricted -Force
+    try {
+        Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" ` -Name "ExecutionPolicy" -Value "Unrestricted" -Force
+        Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" ` -Name "ExecutionPolicy" -Value "Unrestricted" -Force
+        $Ps1Path = "HKLM:\Software\Classes\ps1_auto_file\shell\open\command"
+        New-Item -Path $Ps1Path -Force | Out-Null
+        Set-ItemProperty -Path $Ps1Path -Name "(default)" ` -Value "`"$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe`" -NoLogo -ExecutionPolicy unrestricted -File `"%1`"" ` -Force
+        Set-ItemProperty -Path "HKLM:\Software\Classes\.ps1" -Name "(default)" -Value "ps1_auto_file" -Force
+        Get-ChildItem -Path $PSScriptRoot -Recurse -File | Unblock-File
+        Write-Host "`nEnabled & Unblock PowerShell scripts."
+        Start-Sleep -Seconds 2
+    } catch {
+        Write-Host "`nError enabling scripts: $_"
+        Start-Sleep -Seconds 2
     }
-    $PSEPath = "Registry::HKEY_CLASSES_ROOT\Applications\powershell.exe\shell\open\command"
-    New-Item -Path $PSEPath -Force | Out-Null
-    Set-ItemProperty -Path $PSEPath -Name "(default)" -Value "`"$env:WINDIR\System32\WindowsPowerShell\v1.0\powershell.exe`" -NoLogo -ExecutionPolicy Unrestricted -File `"%1`"" -Force
-    $Root = $PSScriptRoot
-    if (-not $Root) { $Root = Split-Path -Parent $MyInvocation.MyCommand.Path }
-    Get-ChildItem -Path $Root -Recurse | Unblock-File
-    Write-Host "PowerShell scripts enabled, files unblocked."
-    Pause
 }
 
 function Disable {
-    Remove-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\powershell.exe" -Recurse -Force -ErrorAction SilentlyContinue
-    Remove-Item -Path "Registry::HKEY_CLASSES_ROOT\ps1_auto_file" -Recurse -Force -ErrorAction SilentlyContinue
-    $RegistryPaths = 
-        ("HKCU:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell",
-        "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell")
-    foreach ($Path in $RegistryPaths) {
-        Set-ItemProperty -Path $Path -Name ExecutionPolicy -Value Restricted -Force
+    try {
+        Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" ` -Name "ExecutionPolicy" -Value "Restricted" -Force
+        Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" ` -Name "ExecutionPolicy" -Value "Restricted" -Force
+        Remove-Item -Path "HKLM:\Software\Classes\ps1_auto_file" -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-ItemProperty -Path "HKLM:\Software\Classes\.ps1" -Name "(default)" -Force -ErrorAction SilentlyContinue
+        Write-Host "`nDisabled PowerShell scripts." 
+        Start-Sleep -Seconds 2
+    } catch {
+        Write-Host "`nError disabling scripts: $_"
+        Start-Sleep -Seconds 2
     }
-    Write-Host "PowerShell scripts disabled."
-    Pause
 }
 
 do {
     Clear-Host
-    Write-Host "1. Enable Powershell scripts"
-    Write-Host "2. Disable Powershell scripts"
+    Write-Host "1. Enable & Unblock PowerShell scripts"
+    Write-Host "2. Disable PowerShell scripts"
     Write-Host "3. Exit"
-    $Select = Read-Host "Enter 1 ,2 or 3"
+    $Select = Read-Host "Enter 1, 2, or 3"
     switch ($Select) {
         "1" {Enable}
         "2" {Disable}
-        "3" {exit}
+        "3" {Exit}
         default {
-            Write-Host "Invalid option, pick 1, 2, or 3."
+            Write-Host "`nInvalid option. Please enter 1, 2, or 3."
             Start-Sleep -Seconds 2
         }
     }
