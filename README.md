@@ -16,13 +16,13 @@ Various power shell scripts covering aspects including:
 - And more to be worked on in future
 
 > [!IMPORTANT]  
-> Create a Windows restore point beforehand to ensure an easy method of reverting any changes or configurations made.
+> Create a Windows restore point beforehand to ensure an easy method of reverting any changes or configurations made (Poject provides a script to do so "Restore Point.ps1" or you may do it manually through Windows).
 
 > [!CAUTION]
-> Don't run scripts blindly if you don't know what you are doing or unsure of functionality, this can lead to unwanted changes, misconfiguration, corruption etc.
+> Don't run scripts blindly if you don't know what you're doing. Most scripts come with a revert option but to be safe, ensure you know the functionality of scripts before running, failure to do so may lead to unwanted changes, misconfiguration, corruption etc (Use created restore point if required).
 
 > [!TIP]
-> Download the project by the following methods:  
+> Download the project through the following methods:  
 ### 1: Clone Repository
 > ```sh
 > git clone https://github.com/Trn44/Windows-Optimisations-And-Configs.git
