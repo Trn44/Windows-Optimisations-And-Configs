@@ -16,10 +16,10 @@ function Enable {
         Set-ItemProperty -Path $Ps1Path -Name "(default)" ` -Value "`"$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe`" -NoLogo -ExecutionPolicy unrestricted -File `"%1`"" ` -Force
         Set-ItemProperty -Path "HKLM:\Software\Classes\.ps1" -Name "(default)" -Value "ps1_auto_file" -Force
         Get-ChildItem -Path $PSScriptRoot -Recurse -File | Unblock-File
-        Write-Host "`nEnabled & Unblock PowerShell scripts."
+        Write-Host "Enabled & Unblock PowerShell scripts."
         Start-Sleep -Seconds 2
     } catch {
-        Write-Host "`nError enabling scripts: $_"
+        Write-Host "Error enabling scripts: $_"
         Start-Sleep -Seconds 2
     }
 }
@@ -30,10 +30,10 @@ function Disable {
         Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" ` -Name "ExecutionPolicy" -Value "Restricted" -Force
         Remove-Item -Path "HKLM:\Software\Classes\ps1_auto_file" -Recurse -Force -ErrorAction SilentlyContinue
         Remove-ItemProperty -Path "HKLM:\Software\Classes\.ps1" -Name "(default)" -Force -ErrorAction SilentlyContinue
-        Write-Host "`nDisabled PowerShell scripts." 
+        Write-Host "Disabled PowerShell scripts." 
         Start-Sleep -Seconds 2
     } catch {
-        Write-Host "`nError disabling scripts: $_"
+        Write-Host "Error disabling scripts: $_"
         Start-Sleep -Seconds 2
     }
 }
@@ -43,13 +43,13 @@ do {
     Write-Host "1. Enable & Unblock PowerShell scripts"
     Write-Host "2. Disable PowerShell scripts"
     Write-Host "3. Exit"
-    $Select = Read-Host "Enter 1, 2, or 3"
+    $Select = Read-Host "Enter 1, 2 or 3"
     switch ($Select) {
         "1" {Enable}
         "2" {Disable}
         "3" {Exit}
         default {
-            Write-Host "`nInvalid option. Please enter 1, 2, or 3."
+            Write-Host "Invalid option, pick 1, 2 or 3."
             Start-Sleep -Seconds 2
         }
     }
