@@ -52,8 +52,8 @@ do {
     Write-Host "2. Enable Mouse Acceleration"
     $Select = Read-Host "Enter 1 or 2"
     switch ($Select) {
-        "1" {DisableMouseAcceleration; break}
-        "2" {EnableMouseAcceleration; break}
+        "1" {DisableMouseAcceleration}
+        "2" {EnableMouseAcceleration}
         default {
             Write-Host "Invalid option, pick 1 or 2"
             Start-Sleep -Seconds 2
