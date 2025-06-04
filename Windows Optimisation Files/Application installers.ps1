@@ -31,12 +31,13 @@ function Install-VCRedistPackages {
     $TempFolder = "$env:TEMP\VCRedistributables"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    $FileName = Split-Path $URL -Leaf
+    if ($URL -like "*highdpimfc2013*") { $FileName = "vcredist2013.exe" }
+    else { $FileName = Split-Path $URL -Leaf }
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
     Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait
-    }
+}
     Write-Host "Visual C++ Redistributables installed."
     Start-Sleep -Seconds 4
 }
@@ -54,37 +55,33 @@ function Install-DirectX {
     Write-Host "DirectX installed."
     Start-Sleep -Seconds 4
 }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+
+function Install-Discord { 
+    $URLs = @("https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64")
+    $TempFolder = "$env:TEMP\Discord"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = "DiscordSetup.exe"
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait
+    }
+    Write-Host "Discord installed."
+    Start-Sleep -Seconds 4
+}
 
 do {
     Clear-Host
     Write-Host "1. Install C++ Redistributables"
     Write-Host "2. Install DirectX"
-    Write-Host "3. Install Placeholder App"
-    Write-Host "4. Install Placeholder App"
-    Write-Host "5. Install Placeholder App"
-    Write-Host "6. Install Placeholder App"
-    Write-Host "7. Install Placeholder App"
-    Write-Host "8. Install Placeholder App"
-    Write-Host "9. Install Placeholder App"
+    Write-Host "3. Install Discord"
     Write-Host "10. Exit"
     $Select = Read-Host "Enter 1 - 10"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
         "2"  {Install-DirectX}
-        "3"  {Install-PlaceholderApp}
-        "4"  {Install-PlaceholderApp}
-        "5"  {Install-PlaceholderApp}
-        "6"  {Install-PlaceholderApp}
-        "7"  {Install-PlaceholderApp}
-        "8"  {Install-PlaceholderApp}
-        "9"  {Install-PlaceholderApp}
+        "3"  {Install-Discord}
         "10" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
