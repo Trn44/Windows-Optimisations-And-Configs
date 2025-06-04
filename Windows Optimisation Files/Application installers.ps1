@@ -8,19 +8,64 @@ $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
 function Install-VCRedistPackages {
-function Install-PlaceholderApp1 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp2 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp3 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp4 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp5 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp6 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp7 { Write-Host "Installing Placeholder"; Pause }
-function Install-PlaceholderApp8 { Write-Host "Installing Placeholder"; Pause }
+    $URLs = @(  
+    # Visual C++ 2005 x64/x86
+    "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x64.EXE",
+    "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x86.EXE",
+    # Visual C++ 2008 x64/x86
+    "https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x64.exe",
+    "https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x86.exe",
+    # Visual C++ 2010 x64/x86
+    "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe",
+    "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe",
+    # Visual C++ 2012 x64/x86
+    "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe",
+    "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe",
+    # Visual C++ 2013 x64/x86
+    "https://aka.ms/highdpimfc2013x64enu",
+    "https://aka.ms/highdpimfc2013x86enu",
+    # Visual C++ 2015-2022 x64/x86
+    "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+    "https://aka.ms/vs/17/release/vc_redist.x86.exe")   
+
+    $TempFolder = "$env:TEMP\VCRedistributables"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait
+    }
+    Write-Host "Visual C++ Redistributables installed."
+    Start-Sleep -Seconds 4
+}
+function Install-DirectX { 
+    $URLs = @("https://download.microsoft.com/download/1/7/1/1718ccc4-6315-4d8e-9543-8e28a4e18c4c/dxwebsetup.exe")
+    $TempFolder = "$env:TEMP\DirectX"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent", "/norestart" -Wait
+    }
+    Write-Host "DirectX installed."
+    Start-Sleep -Seconds 4
+}
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
+function Install-PlaceholderApp { Write-Host "Installing Placeholder"; Pause }
 
 do {
     Clear-Host
     Write-Host "1. Install C++ Redistributables"
-    Write-Host "2. Install Placeholder App"
+    Write-Host "2. Install DirectX"
     Write-Host "3. Install Placeholder App"
     Write-Host "4. Install Placeholder App"
     Write-Host "5. Install Placeholder App"
@@ -32,7 +77,7 @@ do {
     $Select = Read-Host "Enter 1 - 10"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
-        "2"  {Install-PlaceholderApp}
+        "2"  {Install-DirectX}
         "3"  {Install-PlaceholderApp}
         "4"  {Install-PlaceholderApp}
         "5"  {Install-PlaceholderApp}
