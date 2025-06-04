@@ -22,20 +22,13 @@ Various power shell scripts covering aspects including:
 > Don't run scripts blindly if you don't know what you're doing. Most scripts come with revert options but to be safe, ensure you know the functionality of scripts before running, failure to do so may lead to unwanted changes, misconfiguration, corruption etc (Use created restore point if required).
 
 > [!TIP]
-> Download the project through the following methods:  
-### 1: Clone Repository
-> ```sh
-> git clone https://github.com/Trn44/Windows-Optimisations-And-Configs.git
-> ```
-> Navigate to the directory:
-> ```sh
-> cd Windows-Optimisations-And-Configs
-> ```
-> Run the scripts
-
-### 2: Download ZIP
-> - Visit the repository on GitHub: **[Windows Optimisations](https://github.com/Trn44/Windows-Optimisations-And-Configs)**
+> Download the project through the following methods:
+### 1: Download ZIP
 > - Click the **Code** button
 > - Select **Download ZIP**
 > - Extract ZIP file to any location
-> - Navigate to extracted folder and use the scripts
+> - Navigate to extracted folder and use scripts
+
+### 2: Clone Repository
+> ```sh
+> git clone https://github.com/Trn44/Windows-Optimisations-And-Configs.git
