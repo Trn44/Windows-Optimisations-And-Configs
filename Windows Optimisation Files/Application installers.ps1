@@ -8,7 +8,7 @@ $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
 function Install-VCRedistPackages {
-    $URLs = @(  
+    $URLs = @(
     # Visual C++ 2005 x64/x86
     "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x64.EXE",
     "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x86.EXE",
@@ -26,17 +26,28 @@ function Install-VCRedistPackages {
     "https://aka.ms/highdpimfc2013x86enu",
     # Visual C++ 2015-2022 x64/x86
     "https://aka.ms/vs/17/release/vc_redist.x64.exe",
-    "https://aka.ms/vs/17/release/vc_redist.x86.exe")   
-
+    "https://aka.ms/vs/17/release/vc_redist.x86.exe")
     $TempFolder = "$env:TEMP\VCRedistributables"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    if ($URL -like "*highdpimfc2013*") { $FileName = "vcredist2013.exe" }
-    else { $FileName = Split-Path $URL -Leaf }
+    if ($URL -eq "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x64.EXE" -or $URL -eq "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x86.EXE") {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName (C++ 2005 does not support silent install)."
+    Start-Process -FilePath $FileDirectory -Wait }
+    elseif ($URL -like "*highdpimfc2013*") {
+    $FileName = "vcredist2013.exe"
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait
+    Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait }
+    else {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait }
 }
     Write-Host "Visual C++ Redistributables installed."
     Start-Sleep -Seconds 4
@@ -50,8 +61,8 @@ function Install-DirectX {
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -ArgumentList "/silent", "/norestart" -Wait
-    }
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent", "/norestart" -Wait 
+}
     Write-Host "DirectX installed."
     Start-Sleep -Seconds 4
 }
@@ -65,8 +76,8 @@ function Install-Discord {
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait
-    }
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
     Write-Host "Discord installed."
     Start-Sleep -Seconds 4
 }
