@@ -91,7 +91,7 @@ function Install-BraveBrowser {
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+    Start-Process -FilePath $FileDirectory -ArgumentList "/s" -Wait 
 }
     Write-Host "Brave Browser installed."
     Start-Sleep -Seconds 4
