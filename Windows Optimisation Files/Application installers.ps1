@@ -82,17 +82,35 @@ function Install-Discord {
     Start-Sleep -Seconds 4
 }
 
+function Install-BraveBrowser { 
+    $URLs = @("https://laptop-updates.brave.com/latest/winx64")
+    $TempFolder = "$env:TEMP\BraveBrowser"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = "BraveBrowserSetup.exe"
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "Brave Browser installed."
+    Start-Sleep -Seconds 4
+}
 do {
     Clear-Host
+    Write-Host "| Windows Component Installers |"
     Write-Host "1. Install C++ Redistributables"
     Write-Host "2. Install DirectX"
+    Write-Host "`n| Software Installers |"
     Write-Host "3. Install Discord"
-    Write-Host "10. Exit"
-    $Select = Read-Host "Enter 1 - 10"
+    Write-Host "4. Install Brave Browser"
+    Write-Host "`n10. Exit"
+    $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
         "2"  {Install-DirectX}
         "3"  {Install-Discord}
+        "4"  {Install-BraveBrowser}
         "10" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
