@@ -68,7 +68,7 @@ function Install-DirectX {
 }
 
 function Install-Discord { 
-    $URLs = @("https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64")
+    $URLs = @("https://discordapp.com/api/download?platform=win")
     $TempFolder = "$env:TEMP\Discord"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
