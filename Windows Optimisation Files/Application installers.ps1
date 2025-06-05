@@ -83,19 +83,20 @@ function Install-Discord {
 }
 
 function Install-BraveBrowser { 
-    $URLs = @("https://laptop-updates.brave.com/latest/winx64")
+    $URLs = @("https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSilentSetup.exe")
     $TempFolder = "$env:TEMP\BraveBrowser"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    $FileName = "BraveBrowserSetup.exe"
+    $FileName = Split-Path $URL -Leaf
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -ArgumentList "/s" -Wait 
+    Start-Process -FilePath $FileDirectory -Wait 
 }
     Write-Host "Brave Browser installed."
     Start-Sleep -Seconds 4
 }
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
