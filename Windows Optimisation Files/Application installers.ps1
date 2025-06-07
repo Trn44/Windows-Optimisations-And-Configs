@@ -97,6 +97,21 @@ function Install-BraveBrowser {
     Start-Sleep -Seconds 4
 }
 
+function Install-7Zip { 
+    $URLs = @("https://www.7-zip.org/a/7z2409-x64.exe")
+    $TempFolder = "$env:TEMP\7Zip"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "7zip installed."
+    Start-Sleep -Seconds 4
+}
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -105,6 +120,7 @@ do {
     Write-Host "`n| Software Installers |"
     Write-Host "3. Install Discord"
     Write-Host "4. Install Brave Browser"
+    Write-Host "5. Install 7zip"
     Write-Host "`n10. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -112,6 +128,7 @@ do {
         "2"  {Install-DirectX}
         "3"  {Install-Discord}
         "4"  {Install-BraveBrowser}
+        "5"  {Install-7Zip}
         "10" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
