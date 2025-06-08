@@ -112,6 +112,20 @@ function Install-7Zip {
     Start-Sleep -Seconds 4
 }
 
+function Install-7Zip { 
+    $URLs = @("https://download.scdn.co/SpotifySetup.exe")
+    $TempFolder = "$env:TEMP\Spotify"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "Spotify installed."
+    Start-Sleep -Seconds 4
+}
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -121,6 +135,7 @@ do {
     Write-Host "3. Install Discord"
     Write-Host "4. Install Brave Browser"
     Write-Host "5. Install 7zip"
+    Write-Host "6. Install Spotify"
     Write-Host "`n10. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -129,6 +144,7 @@ do {
         "3"  {Install-Discord}
         "4"  {Install-BraveBrowser}
         "5"  {Install-7Zip}
+        "6"  {Install-Spotify}
         "10" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
