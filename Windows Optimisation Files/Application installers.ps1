@@ -126,6 +126,22 @@ function Install-7Zip {
     Write-Host "Spotify installed."
     Start-Sleep -Seconds 4
 }
+
+function Install-Notepad++ { 
+    $URLs = @("https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe")
+    $TempFolder = "$env:TEMP\Notepad++"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "Notepad++ installed."
+    Start-Sleep -Seconds 4
+}
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -136,6 +152,7 @@ do {
     Write-Host "4. Install Brave Browser"
     Write-Host "5. Install 7zip"
     Write-Host "6. Install Spotify"
+    Write-Host "7. Install Notepad++"
     Write-Host "`n10. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -145,6 +162,7 @@ do {
         "4"  {Install-BraveBrowser}
         "5"  {Install-7Zip}
         "6"  {Install-Spotify}
+        "7"  {Install-Notepad++}
         "10" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
