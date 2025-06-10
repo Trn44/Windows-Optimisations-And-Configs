@@ -157,7 +157,7 @@ function Install-HWiNFO {
     Start-Sleep -Seconds 4
 }
 
-function Install-HWiNFO { 
+function Install-AIDA64 { 
     $URLs = @("https://download.aida64.com/aida64extreme765.exe")
     $TempFolder = "$env:TEMP\AIDA64"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
