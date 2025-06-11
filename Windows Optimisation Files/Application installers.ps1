@@ -172,6 +172,21 @@ function Install-AIDA64 {
     Start-Sleep -Seconds 4
 }
 
+function Install-Surfshark { 
+    $URLs = @("https://downloads.surfshark.com/windows/latest/SurfsharkSetup.exe")
+    $TempFolder = "$env:TEMP\Surfshark"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/exenoui", "/qn" -Wait 
+}
+    Write-Host "Surfshark installed."
+    Start-Sleep -Seconds 4
+}
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -185,7 +200,8 @@ do {
     Write-Host "7. Install Notepad++"
     Write-Host "8. Install HWiNFO"
     Write-Host "9. Install AIDA64"
-    Write-Host "`n10. Exit"
+    Write-Host "10. Install Surfshark VPN"
+    Write-Host "`n100. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
@@ -197,7 +213,8 @@ do {
         "7"  {Install-NotepadPP}
         "8"  {Install-HWiNFO}
         "9"  {Install-AIDA64}
-        "10" {Exit}
+        "10" {Install-Surfshark}
+        "100" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
             Start-Sleep -Seconds 2
