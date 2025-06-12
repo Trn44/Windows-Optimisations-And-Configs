@@ -1,25 +1,10 @@
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
-function Restart-Explorer {
-    Stop-Process -Name explorer -Force
-    Start-Process explorer
-}
-
-function Apply-Theme {
-    param (
-        [string]$Content,
-        [string]$FileName
-    )
-    $TempPath = "$env:TEMP\$FileName"
-    $Content | Out-File -Encoding ASCII -FilePath $TempPath
-    reg import $TempPath
-    Remove-Item $TempPath
-    Restart-Explorer
-}
-
-function BlackTheme {
-    $BlackTheme = @"
+function WindowsTheme {
+param ($DarkTheme)
+$RegFile = if ($DarkTheme) {
+@"
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
@@ -31,11 +16,10 @@ Windows Registry Editor Version 5.00
 "StartColorMenu"=dword:00000000
 "AccentColorMenu"=dword:00000000
 "@
-    Apply-Theme -Content $BlackTheme -FileName "Black.reg"
-}
+} 
 
-function RevertDefaultTheme {
-    $DefaultTheme = @"
+else {
+@"
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
@@ -47,20 +31,25 @@ Windows Registry Editor Version 5.00
 "AccentPalette"=hex(3):DF,DE,DC,00,A6,A5,A1,00,68,65,62,00,4C,4A,48,00,41,\
 3F,3D,00,27,25,24,00,10,0D,0D,00,10,7C,10,00
 "@
-    Apply-Theme -Content $DefaultTheme -FileName "Default.reg"
+}
+
+    $Temp = "$env:TEMP\WindowsTheme.reg"
+    $RegFile | Out-File -Encoding ASCII $Temp
+    reg import $Temp
+    Remove-Item $Temp
+    Stop-Process -Name explorer -Force
+    Start-Process explorer
 }
 
 do {
     Clear-Host
     Write-Host "1. Apply Dark Theme"
     Write-Host "2. Revert to Default Theme"
-    $Select = Read-Host "Enter 1 or 2"
-    switch ($Select) {
-        "1" {BlackTheme; break}
-        "2" {RevertDefaultTheme; break}
-        default {
-            Write-Host "Invalid option, pick 1 or 2"
-            Start-Sleep -Seconds 2
-        }
+    Write-Host "3. Exit"
+    switch (Read-Host "Enter 1, 2 or 3") {
+        "1" {WindowsTheme $true}
+        "2" {WindowsTheme $false}
+        "3" {exit}
+        default { Write-Host "Invalid option, pick 1, 2 or 3"; Start-Sleep -Seconds 2 }
     }
 } while ($true)
