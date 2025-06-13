@@ -10,9 +10,9 @@ Clear-Host
 Write-Output "Running Windows Disk Cleanup and cleaning temporary files."
 Start-Process cleanmgr.exe
 
-$TempFIles = ("C:\Windows\Temp", "$env:LOCALAPPDATA\Temp")
+$TempFiles = ("C:\Windows\Temp", "$env:LOCALAPPDATA\Temp")
 
-foreach ($Directory in $TempFIles) {
+foreach ($Directory in $TempFiles) {
     Get-ChildItem -Path $Directory -Force -Recurse -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
 }
 Write-Output "`nTemp files cleaned."
