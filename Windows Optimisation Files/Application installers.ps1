@@ -218,6 +218,7 @@ do {
     Write-Host "10. Install Surfshark VPN"
     Write-Host "`n| GPU Software |"
     Write-Host "11. Install Display Driver Uninstaller (DDU)"
+    Write-Host "12. Install MSI Afterburner"
     Write-Host "`n100. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -231,7 +232,8 @@ do {
         "8"  {Install-HWiNFO}
         "9"  {Install-AIDA64}
         "10" {Install-Surfshark}
-        "11" {Install-MSIAfterburner}
+        "11" {Install-DDU}
+        "12" {Install-MSIAfterburner}
         "100" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
