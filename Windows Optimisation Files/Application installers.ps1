@@ -187,6 +187,21 @@ function Install-Surfshark {
     Start-Sleep -Seconds 4
 }
 
+function Install-DDU { 
+    $URLs = @("https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.1.5_setup.exe")
+    $TempFolder = "$env:TEMP\DDU"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "Display Driver Uninstaller installed."
+    Start-Sleep -Seconds 4
+}
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -201,6 +216,8 @@ do {
     Write-Host "8. Install HWiNFO"
     Write-Host "9. Install AIDA64"
     Write-Host "10. Install Surfshark VPN"
+    Write-Host "`n| GPU Software |"
+    Write-Host "11. Install Display Driver Uninstaller (DDU)"
     Write-Host "`n100. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -214,6 +231,7 @@ do {
         "8"  {Install-HWiNFO}
         "9"  {Install-AIDA64}
         "10" {Install-Surfshark}
+        "11" {Install-MSIAfterburner}
         "100" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
