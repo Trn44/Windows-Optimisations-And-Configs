@@ -1,8 +1,5 @@
-if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
-    [Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-    exit
-}
+if (-not ([Security.Principal.WindowsIdentity]::GetCurrent().IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) 
+{ Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
@@ -199,6 +196,23 @@ function Install-DDU {
     Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
 }
     Write-Host "Display Driver Uninstaller installed."
+    Start-Sleep -Seconds 4
+}
+
+function Install-MSIAfterburner { 
+    $URLs = @("https://www.guru3d.com/getdownload/2c1b2414f56a6594ffef91236a87c0e976d52e0518b43f3846bab016c2f20c7c4d6ce7dfe1991cc241d59b5c8cb07e5018b083a5902ac6c67fbe3b852ca022b0f73541638028a2d270eb576309b5208d7642bced763e8806fd9c5a9bca00d71e03e3f895d9924372aebbd01f8d3b8f4f270059bd6d5516b53f1cebbb3340fa764f68932d48b5bb538878337e2e92244ec842c6bc8fbe77fb2097b27ac094473cbbffdfdca7be83b46c55febb094e360b65a50d97cc2f5ebe7b2f727003a739d719662666b43dfe7b685f5e6c39")
+    $TempFolder = "$env:TEMP\MSIAfterburner"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = "[Guru3D]-MSIAfterburnerSetup466Beta5Build16555.zip"
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Expand-Archive -Path $FileDirectory -DestinationPath $TempFolder -Force
+    $FileDirectory = Join-Path $TempFolder "MSIAfterburnerSetup.exe"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
+}
+    Write-Host "MSIAfterburner installed."
     Start-Sleep -Seconds 4
 }
 
