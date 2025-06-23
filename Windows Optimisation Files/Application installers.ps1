@@ -216,6 +216,20 @@ function Install-MSIAfterburner {
     Start-Sleep -Seconds 4
 }
 
+function Install-NVCleanstall { 
+    $URLs = @("")
+    $TempFolder = "$env:TEMP\NVCleanstall"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "NVCleanstall installed."
+    Start-Sleep -Seconds 4
+}
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
