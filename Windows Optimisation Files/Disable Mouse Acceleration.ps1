@@ -46,6 +46,6 @@ do {
         'D1' { MouseAcceleration $true }
         'D2' { MouseAcceleration $false }
         'Escape' { Exit }
-        default { Write-Host "`nInvalid option, pick 1, 2 or 3"; Start-Sleep -Seconds 2}
+        default { Write-Host "`nInvalid option, pick 1, 2 or Esc to exit"; Start-Sleep -Seconds 2}
     }
 } while ($true)
