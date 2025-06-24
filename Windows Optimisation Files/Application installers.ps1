@@ -1,5 +1,5 @@
-if (-not ([Security.Principal.WindowsIdentity]::GetCurrent().IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) 
-{ Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(544)) 
+{Start-Process powershell -Args "-File `"$PSCommandPath`"" -Verb RunAs; exit}
 
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
@@ -217,11 +217,11 @@ function Install-MSIAfterburner {
 }
 
 function Install-NVCleanstall { 
-    $URLs = @("")
+    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/NVCleanstall_1.19.0.exe")
     $TempFolder = "$env:TEMP\NVCleanstall"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    $FileName = Split-Path $URL -Leaf
+    $FileName = "NVCleanstall_1.19.0.exe"
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
@@ -230,6 +230,7 @@ function Install-NVCleanstall {
     Write-Host "NVCleanstall installed."
     Start-Sleep -Seconds 4
 }
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -247,6 +248,7 @@ do {
     Write-Host "`n| GPU Software |"
     Write-Host "11. Install Display Driver Uninstaller (DDU)"
     Write-Host "12. Install MSI Afterburner"
+    Write-Host "13. Install NVCleanstall"
     Write-Host "`n100. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -262,6 +264,7 @@ do {
         "10" {Install-Surfshark}
         "11" {Install-DDU}
         "12" {Install-MSIAfterburner}
+        "13" {Install-NVCleanstall}
         "100" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
