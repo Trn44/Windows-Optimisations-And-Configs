@@ -1,5 +1,5 @@
-if (-not ([Security.Principal.WindowsIdentity]::GetCurrent().IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) 
-{ Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(544)) 
+{Start-Process powershell -Args "-File `"$PSCommandPath`"" -Verb RunAs; exit}
 
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
@@ -40,11 +40,12 @@ do {
     Clear-Host
     Write-Host "1. Disable Mouse Acceleration"
     Write-Host "2. Enable Mouse Acceleration"
-    Write-Host "3. Exit"
-    switch (Read-Host "Enter 1, 2 or 3") {
-        "1" {MouseAcceleration $true}
-        "2" {MouseAcceleration $false}
-        "3" {exit}
-        default { Write-Host "Invalid option, pick 1, 2 or 3"; Start-Sleep -Seconds 2 }
+    Write-Host "`nEsc to Exit"
+   $KeyPress = [System.Console]::ReadKey($true)
+    switch ($KeyPress.Key) {
+        'D1' { MouseAcceleration $true }
+        'D2' { MouseAcceleration $false }
+        'Escape' { Exit }
+        default { Write-Host "`nInvalid option, pick 1, 2 or 3"; Start-Sleep -Seconds 2}
     }
 } while ($true)
