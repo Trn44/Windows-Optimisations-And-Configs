@@ -1,7 +1,8 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-> [!NOTE]  
-> Project is a work in progress, not everything may functional.
+![PowerShell](https://img.shields.io/badge/-PowerShell-000000?logo=powershell&logoColor=white)
+![Batch](https://img.shields.io/badge/-Batch%20Script-000000?logo=windows&logoColor=white)
+![Windows 10/11](https://img.shields.io/badge/OS-Windows%2010%2F11-black)
+![WIP](https://img.shields.io/badge/Status-Work%20In%20Progress-black)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-black.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Windows operating system optimisations <br/>
 - A collection of scripts and configurations to optimise systems running W10 or W11 and increase performance. 
