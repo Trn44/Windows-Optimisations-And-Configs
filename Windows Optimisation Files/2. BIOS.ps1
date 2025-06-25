@@ -19,13 +19,14 @@ function RestartBIOS {
 
 do {
     Clear-Host
-    Write-Host "1. Motherboard BIOS update"
+    Write-Host "1. Search for BIOS update"
     Write-Host "2. Restart to BIOS"
-    Write-Host "3. Exit"
-    switch (Read-Host "Enter 1, 2 or 3") {
-        "1" {MotherboardBIOS}
-        "2" {RestartBIOS}
-        "3" {exit}
-        default { Write-Host "Invalid option, pick 1, 2 or 3"; Start-Sleep -Seconds 2 }
+    Write-Host "`nEsc to Exit"
+   $KeyPress = [System.Console]::ReadKey($true)
+    switch ($KeyPress.Key) {
+        'D1' {MotherboardBIOS}
+        'D2' {RestartBIOS}
+        'Escape' {Exit}
+        default { Write-Host "`nInvalid option, pick 1, 2 or Esc to exit"; Start-Sleep -Seconds 2}
     }
 } while ($true)
