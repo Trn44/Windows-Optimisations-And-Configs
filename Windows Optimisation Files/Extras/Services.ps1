@@ -131,7 +131,6 @@ else {
     Set-Service "RetailDemo" -StartupType Manual
     Set-Service "RemoteAccess" -StartupType Manual
     Set-Service "seclogon" -StartupType Manual
-    Set-Service "LanmanServer" -StartupType Automatic
     Set-Service "shpamsvc" -StartupType Manual
     Set-Service "ShellHWDetection" -StartupType Automatic
     Set-Service "SCardSvr" -StartupType Manual
@@ -149,6 +148,7 @@ else {
     Set-Service "wisvc" -StartupType Manual
     Set-Service "WinRM" -StartupType Manual
     Set-Service "WSearch" -StartupType Automatic
+    Set-Service "LanmanWorkstation" -StartupType Automatic
     Write-Host "Services reverted to default"; Start-Sleep -Seconds 2 } 
 }
 
