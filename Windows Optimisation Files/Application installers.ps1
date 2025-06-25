@@ -49,6 +49,7 @@ function Install-VCRedistPackages {
     Write-Host "Visual C++ Redistributables installed."
     Start-Sleep -Seconds 4
 }
+
 function Install-DirectX { 
     $URLs = @("https://download.microsoft.com/download/1/7/1/1718ccc4-6315-4d8e-9543-8e28a4e18c4c/dxwebsetup.exe")
     $TempFolder = "$env:TEMP\DirectX"
@@ -109,7 +110,7 @@ function Install-7Zip {
     Start-Sleep -Seconds 4
 }
 
-function Install-7Zip { 
+function Install-Spotify { 
     $URLs = @("https://download.scdn.co/SpotifySetup.exe")
     $TempFolder = "$env:TEMP\Spotify"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
@@ -231,6 +232,21 @@ function Install-NVCleanstall {
     Start-Sleep -Seconds 4
 }
 
+function Install-Autoruns { 
+    $URLs = @("https://live.sysinternals.com/Autoruns64.exe")
+    $TempFolder = "$env:TEMP\NVCleanstall"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = "Autoruns64.exe"
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "Autoruns installed."
+    Start-Sleep -Seconds 4
+}
+
 do {
     Clear-Host
     Write-Host "| Windows Component Installers |"
@@ -249,6 +265,8 @@ do {
     Write-Host "11. Install Display Driver Uninstaller (DDU)"
     Write-Host "12. Install MSI Afterburner"
     Write-Host "13. Install NVCleanstall"
+    Write-Host "`n| Other Tools |"
+    Write-Host "14. Install Autoruns"
     Write-Host "`n100. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -265,6 +283,7 @@ do {
         "11" {Install-DDU}
         "12" {Install-MSIAfterburner}
         "13" {Install-NVCleanstall}
+        "14" {Install-Autoruns}
         "100" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - 10"
