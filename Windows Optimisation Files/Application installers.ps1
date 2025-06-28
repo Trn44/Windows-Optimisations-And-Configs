@@ -187,7 +187,7 @@ function Install-Surfshark {
 
 function Install-Autoruns { 
     $URLs = @("https://live.sysinternals.com/Autoruns64.exe")
-    $TempFolder = "$env:TEMP\NVCleanstall"
+    $TempFolder = "$env:TEMP\Autoruns"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
     $FileName = "Autoruns64.exe"
@@ -245,6 +245,35 @@ function Install-NVCleanstall {
     Start-Sleep -Seconds 4
 }
 
+function Install-GPUZ { 
+    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/GPU-Z.2.66.0.exe")
+    $TempFolder = "$env:TEMP\GPUZ"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "GPU-Z installed."
+    Start-Sleep -Seconds 4
+}
+
+function Install-CPUZ { 
+    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/cpuz_x64.exe")
+    $TempFolder = "$env:TEMP\CPUZ"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "CPU-Z installed."
+    Start-Sleep -Seconds 4
+}
 
 
 do {
