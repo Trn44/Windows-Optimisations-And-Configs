@@ -185,6 +185,21 @@ function Install-Surfshark {
     Start-Sleep -Seconds 4
 }
 
+function Install-Autoruns { 
+    $URLs = @("https://live.sysinternals.com/Autoruns64.exe")
+    $TempFolder = "$env:TEMP\NVCleanstall"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = "Autoruns64.exe"
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "Autoruns installed."
+    Start-Sleep -Seconds 4
+}
+
 function Install-DDU { 
     $URLs = @("https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.1.5_setup.exe")
     $TempFolder = "$env:TEMP\DDU"
@@ -201,19 +216,17 @@ function Install-DDU {
 }
 
 function Install-MSIAfterburner { 
-    $URLs = @("https://www.guru3d.com/getdownload/2c1b2414f56a6594ffef91236a87c0e976d52e0518b43f3846bab016c2f20c7c4d6ce7dfe1991cc241d59b5c8cb07e5018b083a5902ac6c67fbe3b852ca022b0f73541638028a2d270eb576309b5208d7642bced763e8806fd9c5a9bca00d71e03e3f895d9924372aebbd01f8d3b8f4f270059bd6d5516b53f1cebbb3340fa764f68932d48b5bb538878337e2e92244ec842c6bc8fbe77fb2097b27ac094473cbbffdfdca7be83b46c55febb094e360b65a50d97cc2f5ebe7b2f727003a739d719662666b43dfe7b685f5e6c39")
+    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/MSIAfterburnerSetup466Beta5.exe")
     $TempFolder = "$env:TEMP\MSIAfterburner"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    $FileName = "[Guru3D]-MSIAfterburnerSetup466Beta5Build16555.zip"
+    $FileName = Split-Path $URL -Leaf
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Expand-Archive -Path $FileDirectory -DestinationPath $TempFolder -Force
-    $FileDirectory = Join-Path $TempFolder "MSIAfterburnerSetup.exe"
     Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
 }
-    Write-Host "MSIAfterburner installed."
+    Write-Host "MSI Afterburner installed."
     Start-Sleep -Seconds 4
 }
 
@@ -232,20 +245,7 @@ function Install-NVCleanstall {
     Start-Sleep -Seconds 4
 }
 
-function Install-Autoruns { 
-    $URLs = @("https://live.sysinternals.com/Autoruns64.exe")
-    $TempFolder = "$env:TEMP\NVCleanstall"
-    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
-    foreach ($URL in $URLs) {
-    $FileName = "Autoruns64.exe"
-    $FileDirectory = Join-Path $TempFolder $FileName
-    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
-    Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -Wait 
-}
-    Write-Host "Autoruns installed."
-    Start-Sleep -Seconds 4
-}
+
 
 do {
     Clear-Host
@@ -261,13 +261,15 @@ do {
     Write-Host "8. Install HWiNFO"
     Write-Host "9. Install AIDA64"
     Write-Host "10. Install Surfshark VPN"
-    Write-Host "`n| GPU Software |"
-    Write-Host "11. Install Display Driver Uninstaller (DDU)"
-    Write-Host "12. Install MSI Afterburner"
-    Write-Host "13. Install NVCleanstall"
-    Write-Host "`n| Other Tools |"
-    Write-Host "14. Install Autoruns"
-    Write-Host "`n100. Exit"
+    Write-Host "11. Install Autoruns"
+    Write-Host "`n| GPU & CPU Software |"
+    Write-Host "12. Install Display Driver Uninstaller (DDU)"
+    Write-Host "13. Install MSI Afterburner"
+    Write-Host "14. Install NVCleanstall"
+    Write-Host "15. Install GPU-Z"
+    Write-Host "16. Install CPU-Z"
+    Write-Host "`n| Game Launchers & Software |"
+    Write-Host "`n*PLACEHOLDER*. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
@@ -280,13 +282,15 @@ do {
         "8"  {Install-HWiNFO}
         "9"  {Install-AIDA64}
         "10" {Install-Surfshark}
-        "11" {Install-DDU}
-        "12" {Install-MSIAfterburner}
-        "13" {Install-NVCleanstall}
-        "14" {Install-Autoruns}
-        "100" {Exit}
+        "11" {Install-Autoruns}
+        "12" {Install-DDU}
+        "13" {Install-MSIAfterburner}
+        "14" {Install-NVCleanstall}
+        "15" {Install-GPUZ}
+        "16" {Install-CPUZ}
+        "*PLACEHOLDER*" {Exit}
         default {
-            Write-Host "Invalid option, pick 1 - 10"
+            Write-Host "Invalid option, pick 1 - *PLACEHOLDER*"
             Start-Sleep -Seconds 2
         }
     }
