@@ -278,10 +278,10 @@ function Install-CPUZ {
 
 do {
     Clear-Host
-    Write-Host "| Windows Component Installers |"
+    Write-Host "| Windows Components |"
     Write-Host "1. Install C++ Redistributables"
     Write-Host "2. Install DirectX"
-    Write-Host "`n| Software Installers |"
+    Write-Host "`n| Software & Programs |"
     Write-Host "3. Install Discord"
     Write-Host "4. Install Brave Browser"
     Write-Host "5. Install 7zip"
@@ -291,13 +291,17 @@ do {
     Write-Host "9. Install AIDA64"
     Write-Host "10. Install Surfshark VPN"
     Write-Host "11. Install Autoruns"
+    Write-Host "12. Install VMware Workstation"
     Write-Host "`n| GPU & CPU Software |"
-    Write-Host "12. Install Display Driver Uninstaller (DDU)"
-    Write-Host "13. Install MSI Afterburner"
-    Write-Host "14. Install NVCleanstall"
-    Write-Host "15. Install GPU-Z"
-    Write-Host "16. Install CPU-Z"
-    Write-Host "`n| Game Launchers & Software |"
+    Write-Host "13. Install Display Driver Uninstaller (DDU)"
+    Write-Host "14. Install MSI Afterburner"
+    Write-Host "15. Install NVCleanstall"
+    Write-Host "16. Install GPU-Z"
+    Write-Host "17. Install CPU-Z"
+    Write-Host "18. Install Zen Timings"
+    Write-Host "`n| Game Launchers |"
+    Write-Host "19. Install Steam"
+    Write-Host "20. Install Epic Games Launcher"
     Write-Host "`n*PLACEHOLDER*. Exit"
     $Select = Read-Host "`nEnter 1 - 10"
     switch ($Select) {
@@ -312,11 +316,15 @@ do {
         "9"  {Install-AIDA64}
         "10" {Install-Surfshark}
         "11" {Install-Autoruns}
-        "12" {Install-DDU}
-        "13" {Install-MSIAfterburner}
-        "14" {Install-NVCleanstall}
-        "15" {Install-GPUZ}
-        "16" {Install-CPUZ}
+        "12" {Install-VMWareWorkstation}
+        "13" {Install-DDU}
+        "14" {Install-MSIAfterburner}
+        "15" {Install-NVCleanstall}
+        "16" {Install-GPUZ}
+        "17" {Install-CPUZ}
+        "18" {Install-ZenTimings}
+        "19" {Install-Steam}
+        "20" {Install-EpicGamesLauncher}
         "*PLACEHOLDER*" {Exit}
         default {
             Write-Host "Invalid option, pick 1 - *PLACEHOLDER*"
