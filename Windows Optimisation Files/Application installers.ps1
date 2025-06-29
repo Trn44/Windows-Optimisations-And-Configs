@@ -200,6 +200,22 @@ function Install-Autoruns {
     Start-Sleep -Seconds 4
 }
 
+function Install-VMWareWorkstation { 
+    $URLs = @("https://www.techspot.com/downloads/downloadnowfile/189/?evp=5020e7a546096074942a825fb0cbbdcc&file=241")
+    $TempFolder = "$env:TEMP\VMWare"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "VMWare installed."
+    Start-Sleep -Seconds 4
+}
+
+
 function Install-DDU { 
     $URLs = @("https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.1.5_setup.exe")
     $TempFolder = "$env:TEMP\DDU"
@@ -257,6 +273,21 @@ function Install-GPUZ {
     Start-Process -FilePath $FileDirectory -Wait 
 }
     Write-Host "GPU-Z installed."
+    Start-Sleep -Seconds 4
+}
+
+function Install-CPUZ { 
+    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/cpuz_x64.exe")
+    $TempFolder = "$env:TEMP\CPUZ"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -Wait 
+}
+    Write-Host "CPU-Z installed."
     Start-Sleep -Seconds 4
 }
 
