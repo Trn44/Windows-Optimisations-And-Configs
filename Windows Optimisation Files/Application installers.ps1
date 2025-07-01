@@ -205,7 +205,7 @@ function Install-VMWareWorkstation {
     $TempFolder = "$env:TEMP\VMWare"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
-    $FileName = Split-Path $URL -Leaf
+    $FileName = "VMware-workstation-17.6.3-24583834.exe"
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
@@ -214,7 +214,6 @@ function Install-VMWareWorkstation {
     Write-Host "VMWare installed."
     Start-Sleep -Seconds 4
 }
-
 
 function Install-DDU { 
     $URLs = @("https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.1.5_setup.exe")
@@ -291,21 +290,35 @@ function Install-CPUZ {
     Start-Sleep -Seconds 4
 }
 
-function Install-CPUZ { 
-    $URLs = @("https://github.com/Trn44/Files-Applications/raw/main/cpuz_x64.exe")
-    $TempFolder = "$env:TEMP\CPUZ"
+function Install-Steam { 
+    $URLs = @("https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe")
+    $TempFolder = "$env:TEMP\Steam"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
     $FileName = Split-Path $URL -Leaf
     $FileDirectory = Join-Path $TempFolder $FileName
     Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
     Write-Host "Installing $FileName"
-    Start-Process -FilePath $FileDirectory -Wait 
+    Start-Process -FilePath $FileDirectory -ArgumentList "/silent" -Wait 
 }
-    Write-Host "CPU-Z installed."
+    Write-Host "Steam installed."
     Start-Sleep -Seconds 4
 }
 
+function Install-EpicGamesLauncher { 
+    $URLs = @("https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi")
+    $TempFolder = "$env:TEMP\EpicGamesLauncher"
+    New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
+    foreach ($URL in $URLs) {
+    $FileName = Split-Path $URL -Leaf
+    $FileDirectory = Join-Path $TempFolder $FileName
+    Invoke-WebRequest -Uri $URL -OutFile $FileDirectory
+    Write-Host "Installing $FileName"
+    Start-Process -FilePath $FileDirectory -ArgumentList "/quiet", "/norestart" -Wait 
+}
+    Write-Host "Epic Games Launcher installed."
+    Start-Sleep -Seconds 4
+}
 
 do {
     Clear-Host
@@ -329,12 +342,11 @@ do {
     Write-Host "15. Install NVCleanstall"
     Write-Host "16. Install GPU-Z"
     Write-Host "17. Install CPU-Z"
-    Write-Host "18. Install Zen Timings"
     Write-Host "`n| Game Launchers |"
-    Write-Host "19. Install Steam"
-    Write-Host "20. Install Epic Games Launcher"
-    Write-Host "`n*PLACEHOLDER*. Exit"
-    $Select = Read-Host "`nEnter 1 - 10"
+    Write-Host "18. Install Steam"
+    Write-Host "19. Install Epic Games Launcher"
+    Write-Host "`n20. Exit"
+    $Select = Read-Host "`nEnter 1 - 20"
     switch ($Select) {
         "1"  {Install-VCRedistPackages}
         "2"  {Install-DirectX}
@@ -353,12 +365,11 @@ do {
         "15" {Install-NVCleanstall}
         "16" {Install-GPUZ}
         "17" {Install-CPUZ}
-        "18" {Install-ZenTimings}
-        "19" {Install-Steam}
-        "20" {Install-EpicGamesLauncher}
-        "*PLACEHOLDER*" {Exit}
+        "18" {Install-Steam}
+        "19" {Install-EpicGamesLauncher}
+        "20" {Exit}
         default {
-            Write-Host "Invalid option, pick 1 - *PLACEHOLDER*"
+            Write-Host "Invalid option, pick 1 - 20"
             Start-Sleep -Seconds 2
         }
     }
