@@ -1895,7 +1895,7 @@ GstInput.SprintVaultOver 0
 GstInput.StickAimingAccelerationAmount 0.000000
 GstInput.StickAimingAccelerationAmountVehicle 0.000000
 GstInput.UniformSoldierAiming 1
-GstInput.UniformSoldierAimingCoefficient 0.000000
+GstInput.UniformSoldierAimingCoefficient 1.330000
 GstInput.UniformVehicleAiming 1
 GstInput.UniformVehicleAimingCoefficient 0.000000
 GstInput.VehicleAimRelativeControl 1
