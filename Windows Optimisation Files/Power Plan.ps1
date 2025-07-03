@@ -5,7 +5,6 @@ $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
 function Powerplan {
-
 cmd /c "powercfg /duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 44444444-4444-4444-4444-444444444444 >nul 2>&1"
 cmd /c "powercfg /SETACTIVE 44444444-4444-4444-4444-444444444444 >nul 2>&1"
 powercfg /hibernate off
@@ -26,6 +25,15 @@ cmd /c "reg add `"HKLM\System\ControlSet001\Control\Power\PowerSettings\2a737441
 # Unhide USB 3 link power management
 cmd /c "reg add `"HKLM\System\ControlSet001\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\d4e98f31-5ffe-4ce1-be31-1b38b384c009`" /v `"Attributes`" /t REG_DWORD /d `"2`" /f >nul 2>&1"
 
+# CPU
+# System cooling policy active
+powercfg /setacvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 94d3a615-a899-4ac5-ae2b-e4d8f634367f 001
+powercfg /setdcvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 94d3a615-a899-4ac5-ae2b-e4d8f634367f 001
+# Min/Max processor state 100%
+powercfg /setacvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 893dee8e-2bef-41e0-89c6-b55d0929964c 0x00000064
+powercfg /setdcvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 893dee8e-2bef-41e0-89c6-b55d0929964c 0x00000064
+powercfg /setacvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 bc5038f7-23e0-4960-96da-33abaf5935ec 0x00000064
+powercfg /setdcvalueindex 44444444-4444-4444-4444-444444444444 54533251-82be-4824-96c1-47b60b740d00 bc5038f7-23e0-4960-96da-33abaf5935ec 0x00000064
 }
 
 
