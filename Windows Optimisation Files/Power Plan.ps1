@@ -79,6 +79,8 @@ powercfg /setdcvalueindex 99999999-9999-9999-9999-999999999999 2a737441-1930-440
 
 }
 
+function DefaultPowerplan {
+	powercfg -restoredefaultschemes
 
 do {
     Clear-Host
