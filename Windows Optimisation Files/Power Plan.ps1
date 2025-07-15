@@ -80,7 +80,12 @@ powercfg /setdcvalueindex 99999999-9999-9999-9999-999999999999 2a737441-1930-440
 }
 
 function DefaultPowerplan {
-	powercfg -restoredefaultschemes
+powercfg -restoredefaultschemes
+
+cmd /c "powercfg /hibernate on >nul 2>&1"
+cmd /c "reg delete `"HKLM\SYSTEM\CurrentControlSet\Control\Power`" /v `"HibernateEnabled`" /f >nul 2>&1"
+cmd /c "reg add `"HKLM\SYSTEM\CurrentControlSet\Control\Power`" /v `"HibernateEnabledDefault`" /t REG_DWORD /d `"1`" /f >nul 2>&1"
+}
 
 do {
     Clear-Host
