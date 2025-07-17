@@ -587,6 +587,12 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo>High level control of the rendering quality on OpenGL</SettingNameInfo>
+        <SettingID>544832876</SettingID>
+        <SettingValue>20</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo>Antialiasing - Line gamma</SettingNameInfo>
         <SettingID>545898348</SettingID>
         <SettingValue>0</SettingValue>
