@@ -313,7 +313,7 @@
       <ProfileSetting>
         <SettingNameInfo>Override DLSSG multi-frame count</SettingNameInfo>
         <SettingID>273507943</SettingID>
-        <SettingValue>15</SettingValue>
+        <SettingValue>3</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
