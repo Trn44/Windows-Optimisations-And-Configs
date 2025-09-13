@@ -13,7 +13,7 @@
       <ProfileSetting>
         <SettingNameInfo />
         <SettingID>983226</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -71,6 +71,12 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo>DLSS Model Preset Profile</SettingNameInfo>
+        <SettingID>6505105</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo>Preferred refresh rate</SettingNameInfo>
         <SettingID>6600001</SettingID>
         <SettingValue>1</SettingValue>
@@ -91,7 +97,7 @@
       <ProfileSetting>
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>6710885</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -103,12 +109,18 @@
       <ProfileSetting>
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>6776373</SettingID>
-        <SettingValue>1</SettingValue>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>6776937</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - LOD Bias</SettingNameInfo>
+        <SettingID>7573135</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -199,6 +211,12 @@
       <ProfileSetting>
         <SettingNameInfo>Enable NIS 2.0 KMD NOTIFICATION</SettingNameInfo>
         <SettingID>28027939</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo />
+        <SettingID>269192926</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -437,8 +455,26 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo>Override DLSS-SR performance mode</SettingNameInfo>
+        <SettingID>279951208</SettingID>
+        <SettingValue>3</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Override DLSS-RR performance mode</SettingNameInfo>
+        <SettingID>280859683</SettingID>
+        <SettingValue>3</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>281106605</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Override scaling ratio for DLSS-RR</SettingNameInfo>
+        <SettingID>281531554</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -464,6 +500,12 @@
         <SettingNameInfo>Override DLSS-SR presets</SettingNameInfo>
         <SettingID>283385331</SettingID>
         <SettingValue>16777215</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Override scaling ratio for DLSS-SR</SettingNameInfo>
+        <SettingID>283385333</SettingID>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
