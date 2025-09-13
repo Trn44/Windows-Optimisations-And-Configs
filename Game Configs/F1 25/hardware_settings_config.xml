@@ -21,14 +21,14 @@
 	<multi_frame_gen value="0" />
 	<dynamicresolution_enabled value="false" />
 	<dynamicresolution_target_fps value="0" />
-	<dynamicresolution_profile deltaDown="0.05" percentageDown="0.9" deltaUp="0.01" percentageUp="0.85" alpha="0.95" />
-	<dynamicresolution_min_scale value="0.5" />
+	<dynamicresolution_profile deltaDown="0.02" percentageDown="0.975" deltaUp="0.01" percentageUp="0.925" alpha="0.95" />
+	<dynamicresolution_min_scale value="1.000000" />
 	<ssao enabled="false" algorithm="0" />
 	<ssrt enabled="false" quality="0" />
 	<texture_streaming sizeInMiB="0" texelDensityBias="0.0" concurrentTextureSwaps="0" />
 	<led_display fanatecNativeSupport="false" sliProNativeSupport="false" sliProForceBrightness="127" thrustmasterLEDEnabled="false" thrustmasterDisplayEnabled="false" wootingRGBEnabled="false" />
 	<anisotropic_filter level="0" />
-	<lighting quality="0" volumetricFog="true" volumetricFogMapWidth="0" volumetricFogMapHeight="0" />
+	<lighting quality="0" volumetricFog="false" volumetricFogMapWidth="0" volumetricFogMapHeight="0" />
 	<postprocess motionBlur="false" godRays="false" depthOfField="false" lensStreak="false" lensFlare="false" bloom="false" motionBlurV2="false" />
 	<shadows enabled="false" skyShadowMapSize="32" skyShadowCascadeCount="4" skyShadowLowLod="true" worldShadowMapSize="32" skyShadowMap32Bits="false" nightShadowMapSize="32" nightShadowCharacterCast="false" nightShadowSourceCount="2" sampling="0" spotShadowMapSize="32" spotShadowSampling="0" crowdInShadows="false" />
 	<particles enabled="false" distanceScale="0" rate="0" high="false" />
@@ -41,7 +41,7 @@
 	<hair enabled="false" />
 	<skidmarks enabled="false" parallax="false" />
 	<skidmarks_blending enabled="false" />
-	<audio audioUpdateRate="2" num_job_worker_threads="12" />
+	<audio audioUpdateRate="2" num_job_worker_threads="16" />
 	<async_compute enabled="false" />
 	<cs_culling enabled="false" />
 	<vendor_shader_pack enabled="false" />
