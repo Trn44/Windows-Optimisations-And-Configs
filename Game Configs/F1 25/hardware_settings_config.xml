@@ -55,7 +55,7 @@
 	<rt_ddgi enabled="false" />
 	<rt_version version="0" />
 	<vrs enabled="true" />
-	<reflex mode="1" />
+	<reflex mode="2" />
 	<ser enabled="false" />
 	<ca enabled="false" />
 </hardware_settings_config>
