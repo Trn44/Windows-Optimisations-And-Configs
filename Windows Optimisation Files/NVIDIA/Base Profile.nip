@@ -11,30 +11,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>983226</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>983227</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>983295</SettingID>
-        <SettingValue>AAAAYAMAAAA=</SettingValue>
-        <ValueType>Binary</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Shader Cache</SettingNameInfo>
-        <SettingID>1675263</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Texture filtering - Negative LOD bias</SettingNameInfo>
         <SettingID>1686376</SettingID>
         <SettingValue>0</SettingValue>
@@ -43,24 +19,6 @@
       <ProfileSetting>
         <SettingNameInfo>Texture filtering - Trilinear optimization</SettingNameInfo>
         <SettingID>3066610</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Sharpening Value</SettingNameInfo>
-        <SettingID>3070157</SettingID>
-        <SettingValue>50</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Sharpening - Denoising Factor</SettingNameInfo>
-        <SettingID>3070158</SettingID>
-        <SettingValue>17</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Sharpening Filter</SettingNameInfo>
-        <SettingID>5867816</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -83,48 +41,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>NVIDIA Predefined Ambient Occlusion Usage</SettingNameInfo>
-        <SettingID>6701881</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>6710836</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>6710885</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Ambient Occlusion</SettingNameInfo>
-        <SettingID>6714153</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>6776373</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>6776937</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Texture filtering - LOD Bias</SettingNameInfo>
-        <SettingID>7573135</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Maximum pre-rendered frames</SettingNameInfo>
         <SettingID>8102046</SettingID>
         <SettingValue>1</SettingValue>
@@ -133,18 +49,6 @@
       <ProfileSetting>
         <SettingNameInfo>Texture filtering - Anisotropic filter optimization</SettingNameInfo>
         <SettingID>8703344</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>SILK Smoothness</SettingNameInfo>
-        <SettingID>9990737</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable sample interleaving (MFAA)</SettingNameInfo>
-        <SettingID>10011052</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -152,24 +56,6 @@
         <SettingNameInfo>Vertical Sync</SettingNameInfo>
         <SettingID>11041231</SettingID>
         <SettingValue>138504007</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Sharpening Value for NIS 2.0</SettingNameInfo>
-        <SettingID>11250465</SettingID>
-        <SettingValue>50</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable NIS 2.0</SettingNameInfo>
-        <SettingID>11250721</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable NIS2 App Count</SettingNameInfo>
-        <SettingID>11250737</SettingID>
-        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -185,18 +71,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>14019014</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>14019015</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo />
         <SettingID>14566042</SettingID>
         <SettingValue>0</SettingValue>
@@ -209,32 +83,8 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Enable NIS 2.0 KMD NOTIFICATION</SettingNameInfo>
-        <SettingID>28027939</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo />
-        <SettingID>269192926</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Virtual Reality pre-rendered frames</SettingNameInfo>
-        <SettingID>269553971</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Whisper Mode</SettingNameInfo>
-        <SettingID>269573258</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Whisper Mode Application FPS</SettingNameInfo>
-        <SettingID>269573259</SettingID>
+        <SettingNameInfo>Display the VRR Indicator</SettingNameInfo>
+        <SettingID>268604728</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -247,85 +97,7 @@
       <ProfileSetting>
         <SettingNameInfo>Anisotropic filtering setting</SettingNameInfo>
         <SettingID>270426537</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>SLI indicator</SettingNameInfo>
-        <SettingID>271085649</SettingID>
-        <SettingValue>877871204</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA predefined SLI mode</SettingNameInfo>
-        <SettingID>271830721</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA predefined SLI mode on DirectX 10</SettingNameInfo>
-        <SettingID>271830722</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>SLI rendering mode</SettingNameInfo>
-        <SettingID>271830737</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Number of GPUs to use on SLI rendering mode</SettingNameInfo>
-        <SettingID>271834321</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA predefined number of GPUs to use on SLI rendering mode</SettingNameInfo>
-        <SettingID>271834322</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA predefined number of GPUs to use on SLI rendering mode on DirectX 10</SettingNameInfo>
-        <SettingID>271834323</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA Predefined FXAA Usage</SettingNameInfo>
-        <SettingID>271895433</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>List of Universal GPU ids</SettingNameInfo>
-        <SettingID>271929336</SettingID>
-        <SettingValue>none</SettingValue>
-        <ValueType>String</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA Predefined Ansel Usage</SettingNameInfo>
-        <SettingID>271965065</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>No override of Anisotropic filtering</SettingNameInfo>
-        <SettingID>272354485</SettingID>
         <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>NVIDIA Quality upscaling</SettingNameInfo>
-        <SettingID>272909380</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Application Profile Notification Popup Timeout</SettingNameInfo>
-        <SettingID>272979126</SettingID>
-        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -341,26 +113,8 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Do not display this profile in the Control Panel</SettingNameInfo>
-        <SettingID>275602687</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable FXAA</SettingNameInfo>
-        <SettingID>276089202</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Enable Ansel</SettingNameInfo>
         <SettingID>276158834</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Antialiasing - SLI AA</SettingNameInfo>
-        <SettingID>276495451</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -373,12 +127,6 @@
       <ProfileSetting>
         <SettingNameInfo>Antialiasing - Mode</SettingNameInfo>
         <SettingID>276757595</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Platform Boost</SettingNameInfo>
-        <SettingID>277041150</SettingID>
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -401,15 +149,9 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Background Application Max Frame Rate only for NVCPL to maintain the previous slider value when the BG_FRL_FPS is set to Disabled.</SettingNameInfo>
-        <SettingID>277041158</SettingID>
-        <SettingValue>20</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Frame Rate Limiter for NVCPL</SettingNameInfo>
         <SettingID>277041162</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>357</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -419,20 +161,8 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Display the PhysX indicator</SettingNameInfo>
-        <SettingID>278196591</SettingID>
-        <SettingValue>877871204</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>VRR requested state</SettingNameInfo>
         <SettingID>278196727</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Display the VRR Overlay Indicator</SettingNameInfo>
-        <SettingID>278262127</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -467,12 +197,6 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo> </SettingNameInfo>
-        <SettingID>281106605</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>Override scaling ratio for DLSS-RR</SettingNameInfo>
         <SettingID>281531554</SettingID>
         <SettingValue>0</SettingValue>
@@ -481,12 +205,6 @@
       <ProfileSetting>
         <SettingNameInfo>Anisotropic filtering mode</SettingNameInfo>
         <SettingID>282245910</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Antialiasing - Transparency Supersampling</SettingNameInfo>
-        <SettingID>282364549</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -533,51 +251,9 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Antialiasing - Behavior Flags</SettingNameInfo>
-        <SettingID>283958146</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>CUDA Sysmem Fallback Policy</SettingNameInfo>
         <SettingID>283962569</SettingID>
         <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Optimus flags for enabled applications</SettingNameInfo>
-        <SettingID>284810368</SettingID>
-        <SettingValue>16</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable application for Optimus</SettingNameInfo>
-        <SettingID>284810369</SettingID>
-        <SettingValue>16</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Shim Rendering Mode Options per application for Optimus</SettingNameInfo>
-        <SettingID>284810372</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Antialiasing - Transparency Multisampling</SettingNameInfo>
-        <SettingID>284962204</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Overlay Indicator</SettingNameInfo>
-        <SettingID>286335574</SettingID>
-        <SettingValue>51</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Stereo - swap mode</SettingNameInfo>
-        <SettingID>288568115</SettingID>
-        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -587,75 +263,9 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
-        <SettingNameInfo>Stereo - Enable</SettingNameInfo>
-        <SettingID>296394393</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Stereo - Swap eyes</SettingNameInfo>
-        <SettingID>296633180</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Stereo - Display mode</SettingNameInfo>
-        <SettingID>300489313</SettingID>
-        <SettingValue>4294967295</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Buffer-flipping mode</SettingNameInfo>
-        <SettingID>538927519</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Force Stereo shuttering</SettingNameInfo>
-        <SettingID>541956620</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Enable overlay</SettingNameInfo>
-        <SettingID>543959236</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
         <SettingNameInfo>OpenGL GDI compatibility</SettingNameInfo>
         <SettingID>544392611</SettingID>
         <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>High level control of the rendering quality on OpenGL</SettingNameInfo>
-        <SettingID>544832876</SettingID>
-        <SettingValue>20</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Antialiasing - Line gamma</SettingNameInfo>
-        <SettingID>545898348</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Deep color for 3D applications</SettingNameInfo>
-        <SettingID>546816758</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Exported Overlay pixel types</SettingNameInfo>
-        <SettingID>547022447</SettingID>
-        <SettingValue>1</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Unified back/depth buffer</SettingNameInfo>
-        <SettingID>547524693</SettingID>
-        <SettingValue>4294967295</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -673,24 +283,12 @@
       <ProfileSetting>
         <SettingNameInfo>Preferred OpenGL GPU</SettingNameInfo>
         <SettingID>550564838</SettingID>
-        <SettingValue>id,2.0:2F0410DE,00000100,GF - (432,5,161,12227) @ (0)</SettingValue>
+        <SettingValue>id,2.0:268410DE,00000100,GF - (400,2,161,24564) @ (0)</SettingValue>
         <ValueType>String</ValueType>
       </ProfileSetting>
       <ProfileSetting>
         <SettingNameInfo>Vulkan/OpenGL present method</SettingNameInfo>
         <SettingID>550932728</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Triple buffering</SettingNameInfo>
-        <SettingID>553505273</SettingID>
-        <SettingValue>0</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-      <ProfileSetting>
-        <SettingNameInfo>Extension String version</SettingNameInfo>
-        <SettingID>553612435</SettingID>
         <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
