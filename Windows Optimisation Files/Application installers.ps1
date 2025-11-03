@@ -96,7 +96,7 @@ function Install-BraveBrowser {
 }
 
 function Install-7Zip { 
-    $URLs = @("https://www.7-zip.org/a/7z2409-x64.exe")
+    $URLs = @("https://7-zip.org/a/7z2501-x64.exe")
     $TempFolder = "$env:TEMP\7Zip"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
