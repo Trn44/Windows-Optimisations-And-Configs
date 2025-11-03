@@ -126,7 +126,7 @@ function Install-Spotify {
 }
 
 function Install-NotepadPP { 
-    $URLs = @("https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe")
+    $URLs = @("https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.7/npp.8.8.7.Installer.x64.exe")
     $TempFolder = "$env:TEMP\Notepad++"
     New-Item -ItemType Directory -Path $TempFolder -Force | Out-Null
     foreach ($URL in $URLs) {
