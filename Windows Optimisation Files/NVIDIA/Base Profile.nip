@@ -49,7 +49,7 @@
       <ProfileSetting>
         <SettingNameInfo>Texture filtering - Anisotropic filter optimization</SettingNameInfo>
         <SettingID>8703344</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -97,6 +97,12 @@
       <ProfileSetting>
         <SettingNameInfo>Anisotropic filtering setting</SettingNameInfo>
         <SettingID>270426537</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>No override of Anisotropic filtering</SettingNameInfo>
+        <SettingID>272354485</SettingID>
         <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
@@ -205,7 +211,7 @@
       <ProfileSetting>
         <SettingNameInfo>Anisotropic filtering mode</SettingNameInfo>
         <SettingID>282245910</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
