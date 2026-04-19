@@ -1,6 +1,7 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(544)) 
 {Start-Process powershell -Args "-File `"$PSCommandPath`"" -Verb RunAs; exit}
 
+$Host.UI.RawUI.WindowTitle = "Autounattend.xml Creator"
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
@@ -146,4 +147,5 @@ $XML = @"
 $UserXML = $XML -replace "USERNAME", [System.Security.SecurityElement]::Escape($Username)
 $UserXML | Out-File -FilePath $Output -Encoding UTF8
 Write-Host "autounattend created at $Output, copy to bootable USB root directory"
-Read-Host "`nPress Enter to exit"
+Write-Host "`nPress any key to exit" 
+$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
