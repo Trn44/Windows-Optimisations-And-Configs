@@ -5,13 +5,15 @@ $Host.UI.RawUI.WindowTitle = "DNS & IP Reset"
 $Host.UI.RawUI.BackgroundColor = "Black"
 Clear-Host
 
-Write-Host "Flushing DNS Cache and Renewing IP"
-ipconfig /release
-ipconfig /renew
+Write-Host "Renewing IPs" -ForegroundColor Green
+ipconfig /release 
+ipconfig /renew 
+Write-Host "`nDNS Caches:" -ForegroundColor Green
+Get-DnsClientCache
 Clear-DnsClientCache
 
 Write-Host "`nIP Addresses:" -ForegroundColor Green
-ipconfig | Select-String "IPv4"
+ipconfig /all
 Write-Host "`nDNS Cache:" -ForegroundColor Green
 Get-DnsClientCache | Measure-Object
 
